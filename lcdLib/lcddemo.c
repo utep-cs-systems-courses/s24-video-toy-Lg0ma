@@ -14,7 +14,7 @@ main()
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
 
-  clearScreen(COLOR_RED);
+  clearScreen(COLOR_NAVY);
 
   drawString5x7(20,20, "hello", COLOR_GREEN, COLOR_RED);
 
