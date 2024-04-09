@@ -16,7 +16,7 @@ main()
 
   clearScreen(COLOR_NAVY);
 
-  drawString5x7(20,20, "My Name Is Luis", COLOR_GREEN, COLOR_NAVY);
+  drawString5x7(20,20, "im goma", COLOR_GREEN, COLOR_NAVY);
 
   fillRectangle(30,30, 90, 90, COLOR_ORANGE);
   
