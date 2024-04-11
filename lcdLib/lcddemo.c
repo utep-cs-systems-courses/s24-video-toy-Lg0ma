@@ -60,6 +60,7 @@ main()
 	}
   }
   drawSquare(20,20,20,20);
+  drawTriangle(40,40,20,20);
 }
 
 
