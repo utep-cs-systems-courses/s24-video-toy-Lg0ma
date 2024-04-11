@@ -24,11 +24,11 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
   }
 }
 
-void drawTriangle2(int startCol, int startRow, int width, int height)
+void drawTriangle1(int startCol, int startRow, int width, int height)
 {
-  for(int i = width; i > 0; i--){
+  for(int i = 0; i < width; i++){
     for(int j = 0; j < i; j++){
-      drawPixel(startCol + i, startRow + j ,COLOR_PINK);
+      drawPixel(startCol - i, startRow - j ,COLOR_PINK);
     }
   }
 }
