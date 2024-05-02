@@ -20,12 +20,17 @@ void buzzer_set_period(short cycles)
   CCR1 = cycles >> 1;	
 }
 
+void playTune(int *notes, int*tempo, int noteAmt)
+{
+  for
+
+}
 
 void fur_Elise()
 {
 
-  int notes[] = {E5,D5,E5,D5,E5,B5,D5,C5,A5,A4,C4,E4,A5,B5,E4,E4,E5,Gsharp5,B5,C5,A4,E5};
-
+  int notes[] = {E4, Dsharp4, E4, Dsharp4, E4, B3, D4, C4, A3, Asharp3, B3, D3, E3, Gsharp3, A3};
+  int tempo[] = {362, 362, 362, 362, 362, 725, 543, 543, 1087, 1087, 543, 1087, 543, 406, 1087};
   for(int i = 0; i < 22; i++)
   {
     buzzer_set_period(notes[i]);
@@ -40,6 +45,7 @@ void happy_Bday()
 {
 
   int notes[] = {G4,G4,A3,G4,C4,B5,bk,G4,G4,A3,G4,D5,C4,bk,G4,G4,G5,E4,C4,B5,A3,bk,F4,F4,E4,C4,D5,C4};
+  int tempo[] = {500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,};
 
   for(int i = 0; i < 28; i++)
   {
@@ -53,10 +59,9 @@ void happy_Bday()
 
 void Mario()
 {
-
-  int notes[] = {E5,E5,E5,C5,E5,G5,bk,G5,bk,C5,G5,E5,A5,B5,Bb5,A5,G5,E5,G5,A5,F5,G5,E5,C5,D5,B5};
-
-  for(int i = 0; i < 26; i++)
+  int notes[] = {C4,C4,G4,G4,A4,A4,G4,F4,F4,E4,E4,D4,D4,C4,E4,E4,D4,D4,E4,E4,D4,G4,G4,F4,F4,E4,E4,D4,D4,C4};
+  int tempo[] = {400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400,400};
+  for(int i = 0; i < 30; i++)
   {
     buzzer_set_period(notes[i]);
     __delay_cycles(2500000);
@@ -68,8 +73,8 @@ void Mario()
 
 void runaway()
 {
-  int notes[] = {E6,E6,E6,E4,E6,E6,E6,D4,E6,E6,E6,C4,A5,A5,A5,G5,E6,E6,E6,E4,E6,E6,E6,D4,E6,E6,E6,C4,A5,A5,A5,G5};
-
+  int note[] = {Fsharp4, E4, Dsharp4, Csharp4, B3, A3, Gsharp3, Fsharp3, E3, Dsharp3, Csharp3, B2, A2, Gsharp2, Fsharp2};
+  int tempo[] = {680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680};
   for(int i = 0; i < 32; i++)
   {
 
