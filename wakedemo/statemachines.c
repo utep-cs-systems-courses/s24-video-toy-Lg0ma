@@ -1,9 +1,8 @@
 #include <msp430.h>
-#include "led.h"
 #include "switches.h"
 #include "statemachines.h"
 #include "buzzer.h"
-
+#include "led.h"
 void next_state(int state) {
   leds_off();
   
@@ -11,7 +10,6 @@ void next_state(int state) {
   case 1:
     led_flash(3);
     leds_off();
-    red_led_on();
     fur_Elise();
     leds_off();
     break;
