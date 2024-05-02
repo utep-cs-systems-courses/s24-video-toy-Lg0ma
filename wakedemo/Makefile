@@ -1,20 +1,41 @@
 # makfile configuration
-CPU             	= msp430g2553
-CFLAGS          	= -mmcu=${CPU} -Os -I../h
-LDFLAGS		= -L../lib -L/opt/ti/msp430_gcc/include/ 
+
+COMMON_OBJECTS  =
+
+CPU             = msp430g2553
+
+CFLAGS          = -mmcu=${CPU} -I../h
+
+LDFLAGS		= -L/opt/ti/msp430_gcc/include
+
+
 
 #switch the compiler (for the internal make rules)
-CC              = msp430-elf-gcc
-AS              = msp430-elf-gcc -mmcu=${CPU} -c
 
-all:wakedemo.elf
+CC              = msp430-elf-gcc
+
+AS              = msp430-elf-as
+
+
+
+all: main.elf
+
+
 
 #additional rules for files
-wakedemo.elf: ${COMMON_OBJECTS} wakedemo.o wdt_handler.o
-	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ -lTimer -lLcd 
 
-load: wakedemo.elf
-	msp430loader.sh $^
+main.elf: ${COMMON_OBJECTS} main.o led.o switches.o statemachines.o buzzer.o wdInterrupthandler.o p2_interrupt_handler.o ../lib/libTimer.a
+
+	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
+
+
+
+load: main.elf
+
+	msp430loader.sh main.elf
+
+
 
 clean:
-	rm -f *.o *.elf
+
+	rm -f *.o *.elf *~
