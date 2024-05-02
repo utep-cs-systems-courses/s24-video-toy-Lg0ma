@@ -24,7 +24,7 @@ void playTune(int *notes, int*tempo, int noteAmt)
 {
   for(int i = 0; i < noteAmt; i++)
   {
-    if(i % 2 == 0 ){
+    if((i % 2) == 0 ){
       toggle_red();
     }else{
       toggle_green();
@@ -75,7 +75,7 @@ void Mario()
 
 void runaway()
 {
-  int note[] = {Fsharp4, E4, Dsharp4, Csharp4, B3, A3, Gsharp3, Fsharp3, E3, Dsharp3, Csharp3, B2, A2, Gsharp2, Fsharp2};
+  int notes[] = {Fsharp4, E4, Dsharp4, Csharp4, B3, A3, Gsharp3, Fsharp3, E3, Dsharp3, Csharp3, B2, A2, Gsharp2, Fsharp2};
   int tempo[] = {680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680};
 
   int noteAmt = sizeof(notes)/sizeof(notes[i]);
