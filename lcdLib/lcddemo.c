@@ -33,6 +33,18 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
   }
 }
 
+void drawRunaway(){
+  fillRectangle(50, 133, 30, 30, COLOR_RED);
+  fillRectangle(57, 140, 15, 15, COLOR_YELLOW);
+  fillRectangle(58, 151, 6, 3, COLOR_BLUE);
+  fillRectangle(65, 141, 6, 6, COLOR_GRAY);
+  fillRectangle(58, 141, 7, 4, COLOR_RED);
+  fillRectangle(58, 144, 7, 9, COLOR_BROWN);
+  fillRectangle(65, 151, 5, 3, COLOR_DARK_GREEN);
+  fillRectangle(63, 147, 6, 5, COLOR_BLUE);
+  fillRectangle(75, 157, 4, 3, COLOR_BLACK);
+  fillRectangle(0,0,0,0, COLOR_WHITE);
+}
 
 
 /** Initializes everything, clears the screen, draws "hello" and a square */
@@ -43,9 +55,9 @@ main()
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
 
-  clearScreen(COLOR_NAVY);
+  // clearScreen(COLOR_NAVY);
 
-   drawString5x7(20,60, "Im Goma", COLOR_GREEN, COLOR_NAVY);
+  //  drawString5x7(20,60, "Im Goma", COLOR_GREEN, COLOR_NAVY);
 
 
   // fillRectangle(30,30, 90, 90, COLOR_ORANGE);
@@ -57,18 +69,19 @@ main()
   int y = 0;
   int speed = 6;
   
-  for(short i = 0; i < screenWidth; i++){
-      drawPixel(x, centerRow - y, COLOR_PINK);
-      drawPixel(x, centerRow - speed, COLOR_GREEN);
-      x++;
-      y += speed;
-      speed -= 1;
-      if(y <= 0)
-	{
-	  speed = -speed;
-	}
-  }
-  drawSquare(20,20,20,20);
+  // for(short i = 0; i < screenWidth; i++){
+  //     drawPixel(x, centerRow - y, COLOR_PINK);
+  //     drawPixel(x, centerRow - speed, COLOR_GREEN);
+  //     x++;
+  //     y += speed;
+  //     speed -= 1;
+  //     if(y <= 0)
+	// {
+	//   speed = -speed;
+	// }
+  // }
+  // drawSquare(20,20,20,20);
+  drawRunaway();
 }
 
 
