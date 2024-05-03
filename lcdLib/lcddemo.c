@@ -16,7 +16,7 @@ void drawPiano(){
       }
     }
   }
-
+  clearScreen(COLOR_WHITE);
   fillRectangle(19, 130, 4, 15, COLOR_BLACK);
   fillRectangle(29, 130, 4, 15, COLOR_BLACK);
   fillRectangle(39, 130, 4, 15, COLOR_BLACK);
