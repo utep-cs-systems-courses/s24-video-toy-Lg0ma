@@ -72,6 +72,22 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
   }
 }
 
+
+void drawPlaybttn()
+{
+    int i;
+    for ( i = 0; i < 10; ++i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20+j, 20+i,COLOR_BLACK);
+        }
+    }
+    for ( i = 10; i > 0; --i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20-j, 40+i,COLOR_BLACK);
+        }
+    }
+}
+
 void drawRunaway(){
   fillRectangle(50, 133, 30, 30, COLOR_RED);
   fillRectangle(57, 140, 15, 15, COLOR_YELLOW);
@@ -111,7 +127,8 @@ main()
   // drawSquare(20,20,20,20);
   // drawTriangle(40,40,20,20);
   // drawPiano();
-  drawCake();
+  // drawCake();
+  drawPlaybttn();
 }
 
 
