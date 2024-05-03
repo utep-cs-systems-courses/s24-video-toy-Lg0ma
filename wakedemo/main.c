@@ -17,9 +17,13 @@ int main(void)
   led_init(); // LED
   buzzer_init(); // Buzzer
   lcd_init();
-
-  green_led_on();
   enableWDTInterrupts();
+  green_led_on();
+
+  or_sr(0x8);                  /**< GIE (enable interrupts) */
+  clearScreen(COLOR_BLACK);
+  clearScreen(COLOR_WHITE);
+
 
   or_sr(0x18); // CPU off, GIE on   
 }
