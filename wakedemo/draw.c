@@ -20,21 +20,20 @@ void drawCake()
     int topCol = (screenWidth - 40) / 2;  
     int topRow = baseRow - 15;       
 
-    // Draw base layer
     fillRectangle(baseCol, baseRow, 60, 20, COLOR_TAN);
-    fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);
+    fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);//draw cake
     fillRectangle(topCol, topRow, 40, 5, COLOR_YELLOW);
 
     int candleSpacing = 40 / (3 + 1);
     for(int i = 1; i <= 3; i++) {
-        int candleCol = topCol + i * candleSpacing - 2 / 2;
+        int candleCol = topCol + i * candleSpacing - 2 / 2;//draw candles
         for(int j = 0; j < 9; j++) {
             fillRectangle(candleCol, topRow - j, 2, 1, COLOR_BLUE); 
         }
     }
-    drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry
-    drawPixel(topCol + 40/3, topRow, COLOR_RED); // Left cherry
-    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); // Right cherry
+    drawPixel(topCol + 40/2, topRow, COLOR_RED);
+    drawPixel(topCol + 40/3, topRow, COLOR_RED);//draw cherries
+    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); 
 }
 
 void draw_level()
@@ -92,4 +91,19 @@ void restore_vynil()
 	draw_circle(20, COLOR_GRAY);
 	draw_circle(15, COLOR_WHITE);
 	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
+}
+
+void drawPlaybttn()
+{
+    int i;
+    for ( i = 0; i < 10; ++i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20+j, 20+i,COLOR_BLACK);
+        }
+    }
+    for ( i = 10; i > 0; --i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20-j, 40+i,COLOR_BLACK);
+        }
+    }
 }

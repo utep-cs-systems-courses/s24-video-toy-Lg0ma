@@ -7,7 +7,6 @@
 #include "lcddraw.h"
 
 void drawPiano(){
-  clearScreen(COLOR_WHITE);
   drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
   // used to draw the lines to create piano keys
   for(int i = 15; i < 116; i++){
@@ -30,10 +29,11 @@ void drawPiano(){
 
 void drawCake()
 {
-	int baseCol = (screenWidth - 60) / 2; 
-    int baseRow = screenHeight / 2;         
+  fillRectangle(20,94,88, 88, COLOR_AQUAMARINE);
+	int baseCol = (screenWidth - 60) / 2; //128-60/2 = 34
+    int baseRow = screenHeight / 2;//80     
 
-    int topCol = (screenWidth - 40) / 2;  
+    int topCol = (screenWidth - 40) / 2;  //
     int topRow = baseRow - 15;       
 
     // Draw base layer
