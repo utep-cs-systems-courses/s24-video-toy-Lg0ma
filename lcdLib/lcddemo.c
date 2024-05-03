@@ -6,6 +6,28 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+void drawPiano(){
+  drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
+  // used to draw the lines to create piano keys
+  for(int i = 15; i < 116; i++){
+    if ((i % 10) == 0){
+      for(int j = 130; j < 155; j++){
+	drawPixel(i, j, COLOR_BLACK);
+      }
+    }
+  }
+
+  fillRectangle(19, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(29, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(39, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(59, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(69, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(89, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(99, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(109, 130, 4, 15, COLOR_BLACK);
+  fillRectangle(120, 130, 4, 15, COLOR_WHITE);
+}
+
 void drawSquare(int startCol, int startRow, int width, int height)
 {
   for(int i = 0; i < width; i++){
@@ -81,8 +103,9 @@ main()
 	  speed = -speed;
 	}
   }
-  drawSquare(20,20,20,20);
-  drawTriangle(40,40,20,20);
+  // drawSquare(20,20,20,20);
+  // drawTriangle(40,40,20,20);
+  drawPiano();
 }
 
 

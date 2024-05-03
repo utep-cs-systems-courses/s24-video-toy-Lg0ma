@@ -3,4 +3,7 @@
 
 void runaway_cover();
 void draw_cd();
+void cake();
+void draw_level();
+void draw_piano();
 #endif

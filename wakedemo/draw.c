@@ -1,12 +1,30 @@
 #include <msp430.h>
 #include "lcdutils.h"
+#include <math.h>
 #include "lcddraw.h"
+#include "draw.h"
 
 void runaway_cover()
 {
   fillRectangle(14,100, 100, 100, COLOR_RED);
   fillRectangle(34, 80, 60, 60, COLOR_YELLOW);
 }
+
+void cake()
+{
+	fillRectangle(14,100, 100, 40, COLOR_WHITE);
+}
+
+void draw_level()
+{
+	fillRectangle(14,100, 100, 100, COLOR_LIGHT_BLUE);
+	fillRectangle(14,100, 100, 20, COLOR_BROWN);
+}
+void draw_piano()
+{
+	return;
+}
+
 
 void draw_cd()
 {
@@ -28,4 +46,16 @@ void draw_cd()
 	    }
 	}
     }
+}
+
+void draw_shine1()
+{
+	fillRectangle();
+
+}
+
+void restore_cd()
+{
+	draw_cd();
+	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
 }

@@ -3,6 +3,7 @@
 #include "led.h"
 #include "statemachines.h"
 
+extern int redrawScreen;
 char switch_state_down;
 
 void switch_init()
@@ -44,7 +45,8 @@ void switch_interrupt_handler()
     char button_3 = (p2val & SW3) ? 0 : SW3;
     char button_4 = (p2val & SW4) ? 0 : SW4;
 
-    //redrawScreen = 1;
+    redrawScreen = 1;
+    
     if (button_0)
     {
       next_state(0);
