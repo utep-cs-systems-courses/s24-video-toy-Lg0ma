@@ -60,7 +60,7 @@ void draw_circle(int radius, u_int color)
 
 void drawCake()
 {
-  fillRectangle(20,94,88, 88, COLOR_AQUAMARINE);
+  fillRectangle(20,34,88, 88, COLOR_AQUAMARINE);
 	int baseCol = (screenWidth - 60) / 2; //128-60/2 = 34
     int baseRow = screenHeight / 2;//80     
 
