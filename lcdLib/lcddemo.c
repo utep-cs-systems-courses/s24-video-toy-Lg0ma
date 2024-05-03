@@ -107,18 +107,6 @@ main()
   int y = 0;
   int speed = 6;
   
-
-  for(short i = 0; i < screenWidth; i++){
-      drawPixel(x, centerRow - y, COLOR_PINK);
-      drawPixel(x, centerRow - speed, COLOR_GREEN);
-      x++;
-      y += speed;
-      speed -= 1;
-      if(y <= 0)
-	{
-	  speed = -speed;
-	}
-  }
   // drawSquare(20,20,20,20);
   // drawTriangle(40,40,20,20);
   // drawPiano();

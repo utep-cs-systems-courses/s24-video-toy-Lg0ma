@@ -23,7 +23,7 @@ void drawCake()
     // Draw base layer
     fillRectangle(baseCol, baseRow, 60, 20, COLOR_TAN);
     fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);
-    fillRectangle(topCol, topRow-10, 40, 5, COLOR_YELLOW);
+    fillRectangle(topCol, topRow, 40, 5, COLOR_YELLOW);
 
     int candleSpacing = 40 / (3 + 1);
     for(int i = 1; i <= 3; i++) {
