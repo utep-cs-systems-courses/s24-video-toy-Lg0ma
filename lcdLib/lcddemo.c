@@ -28,6 +28,30 @@ void drawPiano(){
   fillRectangle(120, 130, 4, 15, COLOR_WHITE);
 }
 
+void drawCake()
+{
+	int baseCol = (screenWidth - 60) / 2; 
+    int baseRow = screenHeight / 2;         
+
+    int topCol = (screenWidth - 40) / 2;  
+    int topRow = baseRow - 15;       
+
+    // Draw base layer
+    fillRectangle(baseCol, baseRow, 60, 20, COLOR_BROWN);
+    fillRectangle(topCol, topRow, 40, 15, COLOR_BROWN);
+
+    int candleSpacing = 40 / (3 + 1);
+    for(int i = 1; i <= 3; i++) {
+        int candleCol = topCol + i * candleSpacing - 2 / 2;
+        for(int j = 0; j < 5; j++) {
+            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_WHITE); 
+        }
+    }
+    drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry
+    drawPixel(topCol + 40/3, topRow, COLOR_RED); // Left cherry
+    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); // Right cherry
+}
+
 void drawSquare(int startCol, int startRow, int width, int height)
 {
   for(int i = 0; i < width; i++){
@@ -96,7 +120,8 @@ main()
   }
   // drawSquare(20,20,20,20);
   // drawTriangle(40,40,20,20);
-  drawPiano();
+  // drawPiano();
+  drawCake();
 }
 
 

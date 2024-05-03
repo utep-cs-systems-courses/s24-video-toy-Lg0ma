@@ -1,6 +1,7 @@
 #include <msp430.h>
-#include "lcdutils.h"
 #include <math.h>
+#include <libTimer.h>
+#include "lcdutils.h"
 #include "lcddraw.h"
 #include "draw.h"
 
@@ -10,9 +11,29 @@ void runaway_cover()
   fillRectangle(34, 80, 60, 60, COLOR_YELLOW);
 }
 
-void cake()
+
+void drawCakeWithCandles()
 {
-	fillRectangle(14,100, 100, 40, COLOR_WHITE);
+	int baseCol = (screenWidth - 60) / 2; 
+    int baseRow = screenHeight / 2;         
+
+    int topCol = (screenWidth - 40) / 2;  
+    int topRow = baseRow - 15;       
+
+    // Draw base layer
+    fillRectangle(baseCol, baseRow, 60, 20, COLOR_BROWN);
+    fillRectangle(topCol, topRow, 40, 15, COLOR_BROWN);
+
+    int candleSpacing = 40 / (3 + 1);
+    for(int i = 1; i <= 3; i++) {
+        int candleCol = topCol + i * candleSpacing - 2 / 2;
+        for(int j = 0; j < 5; j++) {
+            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_WHITE); 
+        }
+    }
+    drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry
+    drawPixel(topCol + 40/3, topRow, COLOR_RED); // Left cherry
+    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); // Right cherry
 }
 
 void draw_level()
@@ -25,12 +46,13 @@ void draw_piano()
 	return;
 }
 
-
-void draw_cd()
+//cd radius == 50 color gray
+//cd punchout radius = 15 color ==background
+void draw_circle(int radius, u_int color)
 {
   int centerX = screenWidth/2; // X-coordinate of circle center
   int centerY = screenHeight/2; // Y-coordinate of circle center
-  int radius = 50;  // Radius of the circle
+  int radius = radius;  // Radius of the circle
 
   for (int x = centerX - radius; x <= centerX + radius; x++)
     {
@@ -42,7 +64,7 @@ void draw_cd()
 	  if (distanceSquared <= radius * radius)
 	    {
 	      // Inside the circle, draw a pixel
-	      drawPixel(x, y, COLOR_GRAY); // Yellow face
+	      drawPixel(x, y, color); // Yellow face
 	    }
 	}
     }
@@ -50,12 +72,23 @@ void draw_cd()
 
 void draw_shine1()
 {
-	fillRectangle();
+	fillRectangle(71,50,14,10,COLOR_BLUE);
 
 }
 
-void restore_cd()
+void draw_shine2()
 {
-	draw_cd();
+	fillRectangle(71,50,14,10,COLOR_WHITE);
+	fillRectangle(71,50,14,10,COLOR_RED);
+
+
+}
+
+
+void restore_vynil()
+{
+	draw_circle(50, COLOR_BLACK);
+	draw_circle(20, COLOR_GRAY);
+	draw_circle(15, COLOR_WHITE);
 	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
 }
