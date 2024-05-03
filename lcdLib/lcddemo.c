@@ -46,15 +46,6 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
   }
 }
 
-void drawTriangle1(int startCol, int startRow, int width, int height)
-{
-  for(int i = 0; i < width; i++){
-    for(int j = 0; j < i; j++){
-      drawPixel(startCol - i, startRow - j ,COLOR_PINK);
-    }
-  }
-}
-
 void drawRunaway(){
   fillRectangle(50, 133, 30, 30, COLOR_RED);
   fillRectangle(57, 140, 15, 15, COLOR_YELLOW);
