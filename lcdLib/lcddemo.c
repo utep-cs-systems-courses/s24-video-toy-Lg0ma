@@ -39,7 +39,7 @@ void drawCake()
     // Draw base layer
     fillRectangle(baseCol, baseRow, 60, 20, COLOR_TAN);
     fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);
-    fillRectangle(topCol, topRow-10, 40, 5, COLOR_YELLOW);
+    fillRectangle(topCol, topRow, 40, 5, COLOR_YELLOW);
 
     int candleSpacing = 40 / (3 + 1);
     for(int i = 1; i <= 3; i++) {
@@ -52,6 +52,7 @@ void drawCake()
     drawPixel(topCol + 40/3, topRow, COLOR_RED); // Left cherry
     drawPixel(topCol + 2*40/3, topRow, COLOR_RED); // Right cherry
 }
+
 
 void drawSquare(int startCol, int startRow, int width, int height)
 {
@@ -93,7 +94,7 @@ main()
   lcd_init();
   u_char width = screenWidth, height = screenHeight;
 
-  // clearScreen(COLOR_NAVY);
+  clearScreen(WHITE);
 
   //  drawString5x7(20,60, "Im Goma", COLOR_GREEN, COLOR_NAVY);
 
