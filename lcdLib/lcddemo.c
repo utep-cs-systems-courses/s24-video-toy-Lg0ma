@@ -44,7 +44,7 @@ void drawCake()
     for(int i = 1; i <= 3; i++) {
         int candleCol = topCol + i * candleSpacing - 2 / 2;
         for(int j = 0; j < 5; j++) {
-            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_WHITE); 
+            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_GREEN_YELLOW); 
         }
     }
     drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry
