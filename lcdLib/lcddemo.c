@@ -37,14 +37,15 @@ void drawCake()
     int topRow = baseRow - 15;       
 
     // Draw base layer
-    fillRectangle(baseCol, baseRow, 60, 20, COLOR_BROWN);
-    fillRectangle(topCol, topRow, 40, 15, COLOR_BROWN);
+    fillRectangle(baseCol, baseRow, 60, 20, COLOR_TAN);
+    fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);
+    fillRectangle(topCol, topRow-10, 40, 5, COLOR_YELLOW);
 
     int candleSpacing = 40 / (3 + 1);
     for(int i = 1; i <= 3; i++) {
         int candleCol = topCol + i * candleSpacing - 2 / 2;
-        for(int j = 0; j < 5; j++) {
-            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_GREEN_YELLOW); 
+        for(int j = 0; j < 9; j++) {
+            fillRectangle(candleCol, topRow - j, 2, 1, COLOR_BLUE); 
         }
     }
     drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry

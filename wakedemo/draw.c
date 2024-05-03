@@ -12,7 +12,7 @@ void runaway_cover()
 }
 
 
-void drawCakeWithCandles()
+void drawCake()
 {
 	int baseCol = (screenWidth - 60) / 2; 
     int baseRow = screenHeight / 2;         
