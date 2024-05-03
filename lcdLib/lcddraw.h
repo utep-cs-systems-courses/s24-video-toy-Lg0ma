@@ -5,6 +5,8 @@
 #ifndef lcddraw_included
 #define lcddraw_included
 
+void draw_circle(u_char radius, u_int color);
+
 /** Draw single pixel at col, row 
  *
  *  \param col Column to draw to
