@@ -19,7 +19,7 @@ void next_state(int state) {
     leds_off();
     break;
   case 2:
-    clearScreen(COLOR_WHITE);
+    clearScreen(COLOR_BEIGE);
     led_flash(3);
     leds_off();
     red_led_on();
@@ -27,7 +27,7 @@ void next_state(int state) {
     leds_off();
     break;
   case 3:
-    clearScreen(COLOR_WHITE);
+    clearScreen(COLOR_BLUE);
     led_flash(3);
     leds_off();
     red_led_on();
@@ -35,7 +35,7 @@ void next_state(int state) {
     leds_off();
     break;
   case 4:
-    clearScreen(COLOR_WHITE);
+    clearScreen(COLOR_RED);
     led_flash(3);
     leds_off();
     red_led_on();
