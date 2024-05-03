@@ -14,6 +14,7 @@ void runaway_cover()
 
 void drawCake()
 {
+	fillRectangle(20,94,88, 88, COLOR_AQUAMARINE);
 	int baseCol = (screenWidth - 60) / 2; 
     int baseRow = screenHeight / 2;         
 

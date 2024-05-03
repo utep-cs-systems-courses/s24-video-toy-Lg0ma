@@ -27,6 +27,37 @@ void drawPiano(){
   fillRectangle(120, 130, 4, 15, COLOR_WHITE);
 }
 
+void restore_vynil()
+{
+	draw_circle(50, COLOR_BLACK);
+	draw_circle(20, COLOR_GRAY);
+	draw_circle(15, COLOR_WHITE);
+	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
+}
+
+void draw_circle(int radius, u_int color)
+{
+  int centerX = screenWidth/2; // X-coordinate of circle center
+  int centerY = screenHeight/2; // Y-coordinate of circle center
+  int radius = radius;  // Radius of the circle
+
+  for (int x = centerX - radius; x <= centerX + radius; x++)
+    {
+      for (int y = centerY - radius; y <= centerY + radius; y++)
+	{
+	  // Calculate squared distance from the center
+	  int distanceSquared = (x - centerX) * (x - centerX) + (y - centerY) * (y - centerY);
+	  // Check if the squared distance is less than or equal to the squared radius
+	  if (distanceSquared <= radius * radius)
+	    {
+	      // Inside the circle, draw a pixel
+	      drawPixel(x, y, color); // Yellow face
+	    }
+	}
+    }
+}
+
+
 void drawCake()
 {
   fillRectangle(20,94,88, 88, COLOR_AQUAMARINE);
@@ -129,6 +160,7 @@ main()
   // drawPiano();
   // drawCake();
   drawPlaybttn();
+  restore_vynil();
 }
 
 
