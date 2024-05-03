@@ -25,9 +25,9 @@ void playTune(int *notes, int*tempo, int noteAmt)
   for(int i = 0; i < noteAmt; i++)
   {
     if((i % 2) == 0 ){
-      toggle_red();
+      red_led_on();
     }else{
-      toggle_green();
+      green_led_on();
     }
 
     buzzer_set_period(1000000 / notes[i]);
@@ -37,8 +37,10 @@ void playTune(int *notes, int*tempo, int noteAmt)
     __delay_cycles(10000);
 
     }
+    leds_off();
   }
   buzzer_set_period(bk);
+  
 }
 
 void fur_Elise()
@@ -76,7 +78,7 @@ void Mario()
 void runaway()
 {
   int notes[] = {Fsharp4, E4, Dsharp4, Csharp4, B3, A3, Gsharp3, Fsharp3, E3, Dsharp3, Csharp3, B2, A2, Gsharp2, Fsharp2};
-  int tempo[] = {680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680};
+  int tempo[] = {2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2500, 2580, 2580};
 
   int noteAmt = sizeof(notes)/sizeof(notes[0]);
   playTune(notes,tempo,noteAmt);

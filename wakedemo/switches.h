@@ -1,6 +1,7 @@
 #ifndef switches_included
 #define switches_included
 
+#define SW0 BIT3 //button0 connected to P1.3 Bit3
 #define SW1 BIT0 //button1 connected to P2.0 Bit0
 #define SW2 BIT1 //button2 connected to P2.1 Bit1
 #define SW3 BIT2 //button3 connected to P2.2 Bit2
