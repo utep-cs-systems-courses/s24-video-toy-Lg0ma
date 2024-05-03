@@ -11,6 +11,10 @@ void next_state(int state) {
   leds_off();
   
   switch(state) {
+  case 0:
+    fillRectangle(14,100, 100, 100, COLOR_RED);
+    fillRectangle(34, 80, 60, 60, COLOR_YELLOW);  
+    break;
   case 1:
     clearScreen(COLOR_WHITE);
     led_flash(3);
