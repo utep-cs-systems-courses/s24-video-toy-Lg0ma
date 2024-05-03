@@ -82,14 +82,17 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
 }
 
 
-void drawPlayButton() {
-    int startX = 20; 
-    int startY = 20; 
-
-    for (int i = 0; i < 20; ++i) {
-        for (int j = 0; j <= i; ++j) {
-            drawPixel(startX + j, startY + i, COLOR_BLACK); 
-            drawPixel(startX + j, startY + 20 - i, COLOR_BLACK);
+void drawPlayButton() 
+{
+    int i;
+    for ( i = 0; i < 10; ++i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20+j, 20+i,COLOR_BLACK);
+        }
+    }
+    for ( i = 10; i > 0; --i) {
+        for (int j = 0; j < i; ++j) {
+			drawPixel(20+i, 20+j,COLOR_BLACK);
         }
     }
 }
