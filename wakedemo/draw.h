@@ -14,7 +14,7 @@ void draw_Play_Button();
 void drawTriangle(int startCol, int startRow, int width);
 void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned int color);
 void drawPix(unsigned char col, unsigned char row);
-void draw_box(unsigned char col, unsigned char row, unsigned char size);
+void draw_Box(unsigned char col, unsigned char row, unsigned char size);
 
 extern int cd_state;
 extern int cd_spin;
