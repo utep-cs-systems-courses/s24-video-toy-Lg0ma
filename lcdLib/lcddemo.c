@@ -118,11 +118,11 @@ void draw_level()
 {
 	clearScreen(WHITE);
   fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
-	fillRectangle(20,100, 88, 22, COLOR_DARK_BROWN);
+	fillRectangle(20,100, 88, 22, COLOR_BROWN);
   fillRectangle(30, 90, 15,10, COLOR_GREEN);
   fillRectangle(28,88,19,5,COLOR_GREEN);
-  fillRectangle(57,70, 20,8, COLOR_BROWN);
-  fillRectangle(67,60,5,5,COLOR_YELLOW);
+  fillRectangle(57,75, 30,8, COLOR_BROWN);
+  fillRectangle(67,60,8,8,COLOR_YELLOW);
 }
 
 
