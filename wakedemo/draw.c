@@ -5,11 +5,16 @@
 #include "lcddraw.h"
 #include "draw.h"
 
-void runaway_cover()
-{
-  clearScreen(WHITE);
-  fillRectangle(14,100, 100, 100, COLOR_RED);
-  fillRectangle(34, 80, 60, 60, COLOR_YELLOW);
+void runaway_cover(){
+  fillRectangle(20,34,88, 88, COLOR_RED);
+  fillRectangle(39,53,50, 50, COLOR_YELLOW);
+  fillRectangle(42,56,44,44,COLOR_AQUAMARINE);
+  fillRectangle(65,93,10,7,COLOR_TAN);
+  fillRectangle(50,73,20,5,COLOR_TAN);
+  fillRectangle(68,65,5,5,COLOR_TAN);
+  fillRectangle(67,58,7,7,COLOR_TAN);
+  fillRectangle(65,70,10,15,COLOR_BLACK);
+  drawTriangle(70,80,15);
 }
 
 
@@ -43,9 +48,19 @@ void draw_Cake()
 
 void draw_level()
 {
-	clearScreen(WHITE);
-	fillRectangle(14,100, 100, 100, COLOR_LIGHT_BLUE);
-	fillRectangle(14,100, 100, 20, COLOR_BROWN);
+  clearScreen(WHITE);
+  fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
+  fillRectangle(20,100, 88, 22, COLOR_BROWN);
+  fillRectangle(30, 90, 15,10, COLOR_GREEN);
+  fillRectangle(28,88,19,5,COLOR_GREEN);
+  fillRectangle(57,75, 30,8, COLOR_BROWN);
+  fillRectangle(67,60,8,8,COLOR_YELLOW);
+  fillRectangle(33,82,7,6,COLOR_BLUE);
+  fillRectangle(33,77,7,6,COLOR_RED);
+  fillRectangle(30,44,12,6,WHITE);
+  fillRectangle(55,48,11,6,WHITE);
+  fillRectangle(75,46,11,6,WHITE);
+
 }
 
 

@@ -7,6 +7,9 @@
 
 void draw_circle(unsigned char radius, unsigned int color);
 
+void drawTriangle(int startCol, int startRow, int width);
+
+
 /** Draw single pixel at col, row 
  *
  *  \param col Column to draw to
