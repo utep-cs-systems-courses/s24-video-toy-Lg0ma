@@ -58,7 +58,6 @@ void next_state(int state) {
   case 4:
     fur_elis = 1;
     draw_Piano();
-    draw_Play_Button();
     fur_Elise();
     restore_vynil();
     fur_elis = 0; 

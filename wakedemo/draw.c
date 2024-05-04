@@ -87,7 +87,7 @@ void draw_stars()
 			{
 				if((j % 7) == 0)
 				{
-					drawPix(i,j);
+					drawPixel(i,j, WHITE);
 				}
 			}
 		}
