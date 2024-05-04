@@ -146,13 +146,13 @@ void update_screen(u_char cd_state)
 	restore_vynil();
   }
   if(hbd){
-    drawCake();
+    draw_Cake();
   }
   if(!hbd){
 	restore_vynil();
   }
   if(fur_elis){
-    drawPiano();
+    draw_Piano();
   }
   if(!fur_elis){
 	restore_vynil();
