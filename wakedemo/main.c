@@ -32,6 +32,35 @@ void update_vynil()
   }
 }
 
+short drawPos[2] = {1,10}, controlPos[2] = {2, 10};
+short colVelocity = 1, colLimits[2] = {1, screenWidth/2};
+
+void
+draw_ball(int col, int row, unsigned short color)
+{
+  fillRectangle(col-1, row-1, 3, 3, color);
+}
+
+void
+screen_update_ball()
+{
+  for (char axis = 0; axis < 2; axis ++) 
+    if (drawPos[axis] != controlPos[axis]) /* position changed? */
+      goto redraw;
+  return;			/* nothing to do */
+ redraw:
+  draw_ball(drawPos[0], drawPos[1], COLOR_BLUE); /* erase */
+  for (char axis = 0; axis < 2; axis ++) 
+    drawPos[axis] = controlPos[axis];
+  draw_ball(drawPos[0], drawPos[1], COLOR_WHITE); /* draw */
+}
+
+void
+update_shape()
+{
+  screen_update_ball();
+}
+
 void main(void) 
 {
   configureClocks();
@@ -52,6 +81,7 @@ void main(void)
       redrawScreen = 0;
       update_screen(cd_state);
       update_vynil();
+      update_shape();
     }
     or_sr(0x10);        
   }  
@@ -72,20 +102,10 @@ void wdt_c_handler()
     cd_state = 1;
     redrawScreen = 1;
   }
-  // if(cd_spin){
-  //   if(cd_time++ >= 1000) {
-  //     cd_time = 0;
-  //     cd_state = 0;
-  //     redrawScreen = 1;
-  //   }
-  // }
-  // else{
-  //   if(cd_time++ >= 2000) {
-  //     cd_time = 0;
-  //     cd_spin = 1;
-  //     redrawScreen = 1;
-  //   }
-  // }
+  if(cd_state){
+    update_vynil();
+  }
+
   if(runaway){
     if(runaway_time >= 3000){
       runaway = 0;

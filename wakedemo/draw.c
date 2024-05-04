@@ -201,14 +201,6 @@ void draw_Box(unsigned char col, unsigned char row, unsigned char size)
 
 void update_screen(int cd_state)
 {
-  if(cd_state){
-    cd_spin = 1;
-    draw_shine1();
-  }
-  if(!cd_state){
-    draw_shine2();
-    cd_state = 1;    
-  }
   if(runaway){
     runaway_cover();
   }
