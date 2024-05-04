@@ -82,28 +82,27 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
 }
 
 
-void drawPlayButton() {
-
-  int startX = 20; // X position of the vertex (point) of the triangle
-
-  int startY = 20; // Y position of the vertex (point) of the triangle
-
-  int height = 20; // Height of the triangle
-
-
-
-  // Draw the rightward-pointing triangle
-
-  for (int i = 0; i < height; ++i) {
-
-    for (int j = 0; j <= i; ++j) {
-
+void drawPlayButton()
+ {
+  int startX = 20;
+  int startY = 20;
+  int size = 20; 
+  for (int i = 0; i < size; ++i) 
+  {
+    for (int j = 0; j < i; ++j) 
+    {
       drawPixel(startX + j, startY + i, COLOR_BLACK); // Draw pixels from vertex to right
-
     }
-
   }
-
+  for (int i = 0; i < size; i++)
+  {
+    for (int j = 0; j < size - i; j++)
+    {
+      drawPixel(startX + j, startY + size + i, COLOR_BLACK); // Draw pixels from vertex to right
+    }
+    
+  }
+  
 }
 
 
