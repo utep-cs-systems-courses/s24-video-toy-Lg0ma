@@ -191,7 +191,7 @@ void update_screen(int cd_state)
   }
   if(line){
     // drawLine(20,40,20,COLOR_BLACK);
-	drawPix();
+	drawPix(20,20);
   }
   if(!line){
 	restore_vynil();
