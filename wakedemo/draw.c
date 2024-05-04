@@ -83,9 +83,9 @@ void draw_stars()
 	{
 		for(int j = 0; j < 110; j++)
 		{
-			if(((i*3) % 20) == 2)
+			if(((i*3) % 35) == 2)
 			{
-				if(((i + j) % 15) == 1)
+				if(((i + j) % 18) == 1)
 				{
 					drawPixel(i,j, WHITE);
 				}
