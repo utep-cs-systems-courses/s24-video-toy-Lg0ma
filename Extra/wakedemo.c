@@ -89,8 +89,7 @@ update_shape()
 void main()
 {
   
-  P1DIR |= LED;		/**< Green led on when CPU on */
-  P1OUT |= LED;
+
   configureClocks();
   lcd_init();
   switch_init();
@@ -104,17 +103,7 @@ void main()
       redrawScreen = 0;
       update_shape();
     }
-    P1OUT &= ~LED;	/* led off */
     or_sr(0x10);	/**< CPU OFF */
-    P1OUT |= LED;	/* led on */
   }
 }
 
-
-void
-__interrupt_vec(PORT2_VECTOR) Port_2(){
-  if (P2IFG & SWITCHES) {	      /* did a button cause this interrupt? */
-    P2IFG &= ~SWITCHES;		      /* clear pending sw interrupts */
-    switch_interrupt_handler();	/* single handler for all switches */
-  }
-}
