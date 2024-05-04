@@ -5,7 +5,7 @@
 #ifndef lcddraw_included
 #define lcddraw_included
 
-void draw_circle(unsigned char radiusx, unsigned char centerX, unsigned char centerY, unsigned int color);
+void draw_circle(  unsigned char radiusx, unsigned char centerX, unsigned char centerY, unsigned int color);
 
  
 /** Draw single pixel at col, row 
