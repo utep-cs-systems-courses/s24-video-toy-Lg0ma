@@ -4,7 +4,7 @@
 #include "lcddraw.h"
 
 
-short drawPos[2] = {1,10}, controlPos[2] = {2, 10};
+short drawPos[2] = {40,20}, controlPos[2] = {41, 20};
 short colVelocity = 1, colLimits[2] = {40, screenWidth/2};
 
 void
