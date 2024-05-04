@@ -8,9 +8,9 @@ short drawPos[2] = {1,10}, controlPos[2] = {2, 10};
 short colVelocity = 1, colLimits[2] = {1, screenWidth/2};
 
 void
-draw_ball(int col, int row, unsigned short color)
+draw_shine(int col, int row, unsigned short color)
 {
-  fillRectangle(col-1, row-1, 4, 4, color);
+  fillRectangle(col-1, row-1, 12, 6, color);
 }
 
 void
@@ -21,14 +21,13 @@ screen_update_ball()
       goto redraw;
   return;			/* nothing to do */
  redraw:
-  draw_ball(drawPos[0], drawPos[1], COLOR_BLUE); /* erase */
+  draw_shine(drawPos[0], drawPos[1], COLOR_BLUE); /* erase */
   for (char axis = 0; axis < 2; axis ++) 
     drawPos[axis] = controlPos[axis];
-  draw_ball(drawPos[0], drawPos[1], COLOR_WHITE); /* draw */
+  draw_shine(drawPos[0], drawPos[1], COLOR_WHITE); /* draw */
 }
 
 short redrawScreen = 1;
-u_int controlFontColor = COLOR_GREEN;
 
 void wdt_c_handler()
 {
@@ -54,14 +53,13 @@ update_shape()
 {
   screen_update_ball();
 }
+
 void main()
 {
   configureClocks();
   lcd_init();
-  
   enableWDTInterrupts();      /**< enable periodic interrupt */
   or_sr(0x8);	              /**< GIE (enable interrupts) */
-  
   clearScreen(COLOR_BLUE);
   while (1) {			/* forever */
     if (redrawScreen) {
