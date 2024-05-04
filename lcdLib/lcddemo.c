@@ -7,7 +7,8 @@
 #include "lcddraw.h"
 
 void drawPiano(){
-  fillRectangle(11, 125, 105, 30, COLOR_BROWN);
+  fillRectangle(11, 125, 110, 35, COLOR_BROWN);
+  fillRectangle(16, 130, 100, 25, COLOR_WHITE);
   drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
   // used to draw the lines to create piano keys
   for(int i = 15; i < 116; i++){
