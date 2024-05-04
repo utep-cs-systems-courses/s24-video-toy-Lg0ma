@@ -40,6 +40,7 @@ void main(void)
     if (redrawScreen) {
       redrawScreen = 0;
       update_screen(cd_state);
+      update_vynil();
     }
     or_sr(0x10);        
   }  
@@ -47,27 +48,33 @@ void main(void)
 
 void wdt_c_handler()
 {
+  static int sec_cout = 0;
   static int cd_time = 0;
   static int runaway_time = 0;
   static int fureli_time = 0;
   static int hbd_time = 0;
   static int mario_time = 0;
   static int line_time = 0;
+  sec_cout++;
   
-  if(cd_spin){
-    if(cd_time++ >= 1000) {
-      cd_time = 0;
-      cd_state = 0;
-      redrawScreen = 1;
-    }
+  if(sec_cout >= 250){
+    cd_state = 1;
+    redrawScreen = 1;
   }
-  else{
-    if(cd_time++ >= 2000) {
-      cd_time = 0;
-      cd_spin = 1;
-      redrawScreen = 1;
-    }
-  }
+  // if(cd_spin){
+  //   if(cd_time++ >= 1000) {
+  //     cd_time = 0;
+  //     cd_state = 0;
+  //     redrawScreen = 1;
+  //   }
+  // }
+  // else{
+  //   if(cd_time++ >= 2000) {
+  //     cd_time = 0;
+  //     cd_spin = 1;
+  //     redrawScreen = 1;
+  //   }
+  // }
   if(runaway){
     if(runaway_time >= 3000){
       runaway = 0;
@@ -92,5 +99,16 @@ void wdt_c_handler()
     if(line_time >= 2000){
       line = 0;
     }
+  }
+}
+
+void update_vynil()
+{
+	if(cd_state == 1)
+  {
+    draw_shine1();
+  }else if(cd_state == 0)
+  {
+    draw_shine2();
   }
 }

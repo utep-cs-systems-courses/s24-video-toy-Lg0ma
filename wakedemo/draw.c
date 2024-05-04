@@ -164,6 +164,7 @@ void restore_vynil()
 	draw_circle(7,108,140,COLOR_BLACK);
 }
 
+
 void draw_Play_Button()
  {
   int startX = 60;
