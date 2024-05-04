@@ -121,6 +121,7 @@ if (sec_cout >= 25) {		/* 10/sec */
     {				/* update hourglass */
     redrawScreen = 1;
   }
+}
 //----------------------------------------------------
 
   if(runaway){
