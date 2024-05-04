@@ -23,7 +23,7 @@ Top:
     mov.b 3(r1), r14
     call #drawPixel
     add #1, 4(r1)
-    goto Top
+    jmp Top
 Out:
     add #6, r1
     pop r0
