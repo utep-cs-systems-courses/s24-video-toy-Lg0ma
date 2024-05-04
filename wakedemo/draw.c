@@ -141,14 +141,14 @@ void draw_Piano()
 
 void draw_shine1()
 {
-	fillRectangle(71,50,14,10,COLOR_BLUE);
+	fillRectangle(71,50,14,10,COLOR_WHITE);
 
 }
 
 void draw_shine2()
 {
 	fillRectangle(71,50,14,10,COLOR_BLACK);
-	fillRectangle(71,50,14,10,COLOR_RED);
+	fillRectangle(71,50,14,10,COLOR_WHITE);
 }
 
 
