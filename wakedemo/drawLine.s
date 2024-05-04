@@ -6,7 +6,7 @@
 	.global drawLine
 	.extern drawPixel
 
-drawLine:
+drawPix:
 	sub #6, r1
     mov.b r12, 0(r1) ; col
     mov.b r13, 1(r1) ;row

@@ -13,6 +13,7 @@ void restore_vynil();
 void draw_Play_Button();
 void drawTriangle(int startCol, int startRow, int width);
 void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned int color);
+void drawPix();
 
 extern int cd_state;
 extern int cd_spin;

@@ -23,7 +23,8 @@ void next_state(int state) {
   case 0:
     line =1;
     clearScreen(WHITE);
-    drawLine(20,40,20,COLOR_BLACK);
+    // drawLine(20,40,20,COLOR_BLACK);
+    drawPix();
     drawString5x7(20,15,"I did that in assembly",BLACK,WHITE);
     __delay_cycles(15000000);
     restore_vynil();
