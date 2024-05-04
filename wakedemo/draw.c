@@ -64,8 +64,8 @@ void draw_Cake()
 
 void draw_level()
 {
-  drawString5x7(40,15,"Mario",BLACK,WHITE);
   clearScreen(WHITE);
+  drawString5x7(40,15,"Mario",BLACK,WHITE);
   fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
   fillRectangle(20,100, 88, 22, COLOR_BROWN);
   fillRectangle(30, 90, 15,10, COLOR_GREEN);
