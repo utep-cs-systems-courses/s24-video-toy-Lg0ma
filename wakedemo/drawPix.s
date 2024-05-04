@@ -6,6 +6,9 @@
 	.global drawPix
 	.extern drawPixel
 
+DrawBox:
+
+Top:
 
 drawPix:
 	mov 0x0000, r14;
