@@ -21,6 +21,17 @@ int hbd;
 int fur_elis;
 int line;
 
+void update_vynil()
+{
+	if(cd_state == 1)
+  {
+    draw_shine1();
+  }else if(cd_state == 0)
+  {
+    draw_shine2();
+  }
+}
+
 void main(void) 
 {
   configureClocks();
@@ -99,16 +110,5 @@ void wdt_c_handler()
     if(line_time >= 2000){
       line = 0;
     }
-  }
-}
-
-void update_vynil()
-{
-	if(cd_state == 1)
-  {
-    draw_shine1();
-  }else if(cd_state == 0)
-  {
-    draw_shine2();
   }
 }
