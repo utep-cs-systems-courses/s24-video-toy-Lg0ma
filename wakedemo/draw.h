@@ -12,7 +12,7 @@ void draw_shine2();
 void restore_vynil();
 void draw_Play_Button();
 void drawTriangle(int startCol, int startRow, int width);
-void drawLine(u_char col, u_char row, u_char size, u_int color);
+void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned int color);
 
 extern int cd_state;
 extern int cd_spin;
