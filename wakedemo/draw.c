@@ -91,7 +91,7 @@ void restore_vynil()
 	draw_circle(50, COLOR_BLACK);
 	draw_circle(20, COLOR_GRAY);
 	draw_circle(15, COLOR_WHITE);
-	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
+	drawString5x7(26,120,"Choose a Tune", BLACK, COLOR_WHITE);
 }
 
 void drawPlaybttn()

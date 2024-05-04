@@ -29,10 +29,11 @@ void drawPiano(){
 
 void restore_vynil()
 {
+  fillRectangle(74,40,40,10,BLACK);
 	draw_circle(50, COLOR_BLACK);
 	draw_circle(20, COLOR_GRAY);
 	draw_circle(15, COLOR_WHITE);
-	drawString5x7(26,140,"Choose a Tune", BLACK, COLOR_WHITE);
+	drawString5x7(26,120,"Choose a Tune", BLACK, COLOR_WHITE);
 }
 
 
