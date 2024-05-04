@@ -19,6 +19,7 @@ int runaway;
 int mario;
 int hbd;
 int fur_elis;
+int line;
 
 void main(void) 
 {
@@ -51,6 +52,7 @@ void wdt_c_handler()
   static int fureli_time = 0;
   static int hbd_time = 0;
   static int mario_time = 0;
+  static int line_time = 0;
   
   if(cd_spin){
     if(cd_time++ >= 1000) {
@@ -86,10 +88,9 @@ void wdt_c_handler()
       fur_elis = 0;
     }
   }
-  // if(mc){
-  //   if(mc_time >= 2000){
-  //     mc = 0;
-  //     clearMain();
-  //   }
-  // }
+  if(line){
+    if(line_time >= 2000){
+      line = 0;
+    }
+  }
 }

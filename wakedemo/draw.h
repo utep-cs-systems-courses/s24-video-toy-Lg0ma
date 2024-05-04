@@ -20,4 +20,5 @@ extern int runaway;
 extern int mario;
 extern int hbd;
 extern int fur_elis;
+extern int line;
 #endif

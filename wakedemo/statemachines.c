@@ -14,13 +14,19 @@ extern  int runaway;
 extern  int mario;
 extern  int hbd;
 extern  int fur_elis;
+extern int line;
 
 void next_state(int state) {
   leds_off();
   
   switch(state) {
   case 0:
- 
+    line =1;
+    drawLine(20,40,20,COLOR_BLACK);
+    drawString5x7(20,15,"I did that in assembly",WHITE,BLACK);
+    __delay_cycles(150000);
+    restore_vynil();
+    line = 0;
     break;
   case 1:
     runaway = 1;
