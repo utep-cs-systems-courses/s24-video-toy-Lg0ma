@@ -75,19 +75,17 @@ void drawSquare(int startCol, int startRow, int width, int height)
 }
 
 void drawTriangle(int startCol, int startRow, int width) {
-    // Drawing the left side
     for(int i = 0; i < width; i++) {
         for(int j = 0; j <= i; j++) {
-            drawPixel(startCol - j, startRow + i, COLOR_BLACK);  // Left side goes upwards and left
+            drawPixel(startCol - j, startRow + i, COLOR_BLACK);  
         }
     }
 
-    // Drawing the right side
     for(int i = 0; i < width; i++) {
         for(int j = 0; j <= i; j++) {
-            drawPixel(startCol + j, startRow + i, COLOR_BLACK);  // Right side goes upwards and right
-        }
+            drawPixel(startCol + j, startRow + i, COLOR_BLACK);  
     }
+}
 }
 
 
@@ -157,7 +155,7 @@ main()
   // restore_vynil();
   // drawPiano();
   drawRunaway();
-  drawTriangle(40,40,20);
+  drawTriangle(70,80,20);
 }
 
 
