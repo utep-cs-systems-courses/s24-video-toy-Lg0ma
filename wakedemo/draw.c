@@ -104,7 +104,7 @@ void restore_vynil()
 void draw_Play_Button()
  {
   int startX = 60;
-  int startY = 120;
+  int startY = 130;
   int size = 10; 
   for (int i = 0; i < size; ++i) 
   {

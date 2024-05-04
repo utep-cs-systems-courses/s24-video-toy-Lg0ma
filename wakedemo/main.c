@@ -67,12 +67,12 @@ void wdt_c_handler()
     }
   }
   if(runaway){
-    if(runaway_time >= 2000){
+    if(runaway_time >= 3000){
       runaway = 0;
     }
   }
   if(mario){
-    if(mario_time >= 2000){
+    if(mario_time >= 3000){
       mario = 0;
     }
   }

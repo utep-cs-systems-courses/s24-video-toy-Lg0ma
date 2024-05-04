@@ -47,7 +47,7 @@ void fur_Elise()
 {
 
   int notes[] = {E4, Dsharp4, E4, Dsharp4, E4, B3, D4, C4, A3, Asharp3, B3, D3, E3, Gsharp3, A3};
-  int tempo[] = {362, 362, 362, 362, 362, 725, 543, 543, 1087, 1087, 543, 1087, 543, 406, 1087};
+  int tempo[] = {362, 362, 362, 362, 362, 525, 543, 543, 1087, 1087, 543, 1087, 543, 406, 1087};
 
   int noteAmt = sizeof(notes)/sizeof(notes[0]);
   playTune(notes,tempo,noteAmt);

@@ -74,12 +74,22 @@ void drawSquare(int startCol, int startRow, int width, int height)
   }
 }
 
-void drawTriangle1(int startCol, int startRow, int width, int height)
+void drawTriangle(int startCol, int startRow, int width)
 {
-  for(int i = 0; i < width; i++){
-    for(int j = 0; j < i; j++){
-      drawPixel(startCol + i, startRow + j ,COLOR_PINK);
+  for(int i = 0; i < width; i++)
+  {
+    for(int j = 0; j < i; j++)
+    {
+      drawPixel(startCol + i, startRow + j ,COLOR_BLACK);
     }
+  }
+  for(int i = 0; i < width; i++)
+  {
+    for (int j = 0; i < j; j++)
+    {
+      drawPixel(startCol - i, startRow + j, COLOR_BLACK);
+    }
+    
   }
 }
 
@@ -110,16 +120,12 @@ void drawPlayButton()
 
 
 void drawRunaway(){
-  fillRectangle(50, 133, 30, 30, COLOR_RED);
-  fillRectangle(57, 140, 15, 15, COLOR_YELLOW);
-  fillRectangle(58, 151, 6, 3, COLOR_BLUE);
-  fillRectangle(65, 141, 6, 6, COLOR_GRAY);
-  fillRectangle(58, 141, 7, 4, COLOR_RED);
-  fillRectangle(58, 144, 7, 9, COLOR_BROWN);
-  fillRectangle(65, 151, 5, 3, COLOR_DARK_GREEN);
-  fillRectangle(63, 147, 6, 5, COLOR_BLUE);
-  fillRectangle(75, 157, 4, 3, COLOR_BLACK);
-  fillRectangle(0,0,0,0, COLOR_WHITE);
+  fillRectangle(20,34,88, 88, COLOR_RED);
+  fillRectangle(39,53,50, 50, COLOR_YELLOW);
+  // drawTriangle()
+
+
+
 }
 
 
@@ -146,12 +152,13 @@ main()
   int speed = 6;
   
   // drawSquare(20,20,20,20);
-  // drawTriangle(40,40,20,20);
+  drawTriangle(40,40,20,20);
   // drawPiano();
   // drawCake();
   // drawPlayButton();
-  restore_vynil();
-  drawPiano();
+  // restore_vynil();
+  // drawPiano();
+  drawRunaway();
 }
 
 
