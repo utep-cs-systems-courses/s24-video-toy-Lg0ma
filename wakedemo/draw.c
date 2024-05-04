@@ -77,11 +77,27 @@ void draw_level()
 
 }
 
-
+void draw_stars()
+{
+	for(int i = 0; i < screenWidth; i ++)
+	{
+		for(int j = 0; j < 110; j++)
+		{
+			if((i % 5) == 2)
+			{
+				if((j % 7) == 0)
+				{
+					drawPix(i,j);
+				}
+			}
+		}
+	}
+}
 
 void draw_Piano()
 {
-  clearScreen(WHITE);
+  clearScreen(BLACK);
+  draw_stars();
   fillRectangle(11, 125, 110, 35, COLOR_BROWN);
   fillRectangle(16, 130, 100, 25, COLOR_WHITE);
   drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
