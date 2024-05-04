@@ -22,10 +22,10 @@ void drawPixel(unsigned char col, unsigned char row, unsigned int colorBGR)
 
 //screenWidth/2;
 //screenHeight/2 - 20;
-void draw_circle(unsigned char radiusx, unsigned char centerX, unsigned char centerY, unsigned int color)
+void draw_circle(unsigned char radiusx, unsigned char center_X, unsigned char center_Y, unsigned int color)
 {
-  int centerX = screenWidth/2; // X-coordinate of circle center
-  int centerY = screenHeight/2 - 20; // Y-coordinate of circle center
+  int centerX = center_X;
+  int centerY = center_Y;
   int radius = radiusx;  // Radius of the circle
 
   for (int x = centerX - radius; x <= centerX + radius; x++)
