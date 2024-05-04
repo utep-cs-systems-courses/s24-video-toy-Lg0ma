@@ -4,8 +4,6 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 #include "draw.h"
-#include <stdlib.h> 
-#include <time.h>   
 
 void runaway_cover(){
   clearScreen(WHITE);
@@ -81,23 +79,20 @@ void draw_level()
 
 void draw_stars()
 {
-    srand(time(NULL)); 
-
-    for (int i = 0; i < screenWidth; i++)
-    {
-        for (int j = 0; j < 110; j++)
-        {
-            if (rand() % 5 == 2) 
-            {
-                if (rand() % 7 == 0)  
-                {
-                    drawPixel(i, j, WHITE);
-                }
-            }
-        }
-    }
+	for(int i = 0; i < screenWidth; i ++)
+	{
+		for(int j = 0; j < 110; j++)
+		{
+			if(((i*3) % 5) == 2)
+			{
+				if(((i + j) % 7) == 5)
+				{
+					drawPixel(i,j, WHITE);
+				}
+			}
+		}
+	}
 }
-
 
 void draw_Piano()
 {
