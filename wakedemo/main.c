@@ -52,7 +52,6 @@ void main(void)
       redrawScreen = 0;
       update_screen(cd_state);
       update_vynil();
-      update_shape();
     }
     or_sr(0x10);        
   }  
