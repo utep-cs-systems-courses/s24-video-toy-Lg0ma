@@ -10,15 +10,15 @@
 #include "switches.h"
 #include "draw.h"
 
-extern u_char redrawScreen;
-u_char redrawScreen = 1;
-u_char cd_state;
-u_char cd_spin;
-u_char line;
-u_char runaway;
-u_char mario;
-u_char hbd;
-u_char fur_elis;
+extern  int redrawScreen;
+int redrawScreen = 1;
+int cd_state;
+int cd_spin;
+int line;
+int runaway;
+int mario;
+int hbd;
+int fur_elis;
 
 void main(void) 
 {

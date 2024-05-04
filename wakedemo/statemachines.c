@@ -7,13 +7,13 @@
 #include "lcddraw.h"
 #include "lcdutils.h"
 
-extern u_char cd_state;
-extern u_char cd_spin;
-extern u_char line;
-extern u_char runaway;
-extern u_char mario;
-extern u_char hbd;
-extern u_char fur_elis;
+extern  int cd_state;
+extern  int cd_spin;
+extern  int line;
+extern  int runaway;
+extern  int mario;
+extern  int hbd;
+extern  int fur_elis;
 
 void next_state(int state) {
   leds_off();
