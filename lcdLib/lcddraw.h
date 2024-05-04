@@ -5,7 +5,7 @@
 #ifndef lcddraw_included
 #define lcddraw_included
 
-void draw_circle(u_char radius, u_int color);
+void draw_circle(unsigned char radius, unsigned int color);
 
 /** Draw single pixel at col, row 
  *
@@ -13,7 +13,7 @@ void draw_circle(u_char radius, u_int color);
  *  \param row Row to draw to
  *  \param colorBGR Color of pixel in BGR
  */
-void drawPixel(u_char col, u_char row, u_int colorBGR);
+void drawPixel(unsigned char col, unsigned char row, unsigned int colorBGR);
 
 /** Fill rectangle
  *
@@ -23,13 +23,13 @@ void drawPixel(u_char col, u_char row, u_int colorBGR);
  *  \param height height of rectangle
  *  \param colorBGR Color of rectangle in BGR
  */
-void fillRectangle(u_char colMin, u_char rowMin, u_char width, u_char height, u_int colorBGR);
+void fillRectangle(unsigned char colMin, unsigned char rowMin, unsigned char width, unsigned char height, unsigned int colorBGR);
 
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen
  */
-void clearScreen(u_int colorBGR);
+void clearScreen(unsigned int colorBGR);
 
 /** Draw string at col,row
  *  Type:
@@ -43,14 +43,14 @@ void clearScreen(u_int colorBGR);
  *  \param fgColorBGR Foreground color in BGR
  *  \param bgColorBGR Background color in BGR
  */
-void drawString5x7(u_char col, u_char row, char *string, 
-		   u_int fgColorBGR, u_int bgColorBGR);
+void drawString5x7(unsigned char col, unsigned char row, char *string, 
+		   unsigned int fgColorBGR, unsigned int bgColorBGR);
 
 /** 5x7 font - this function draws background pixels
  *  Adapted from RobG's EduKit
  */
-void drawChar5x7(u_char col, u_char row, char c, 
-		 u_int fgColorBGR, u_int bgColorBGR);
+void drawChar5x7(unsigned char col, unsigned char row, char c, 
+		 unsigned int fgColorBGR, unsigned int bgColorBGR);
 
 /** Draw rectangle outline
  *  
@@ -60,8 +60,8 @@ void drawChar5x7(u_char col, u_char row, char c,
  *  \param height Height of rectangle
  *  \param colorBGR Color of rectangle in BGR
  */
-void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
-		     u_int colorBGR);
+void drawRectOutline(unsigned char colMin, unsigned char rowMin, unsigned char width, unsigned char height,
+		     unsigned int colorBGR);
 #endif // included
 
 
