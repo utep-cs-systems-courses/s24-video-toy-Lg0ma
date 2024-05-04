@@ -75,25 +75,21 @@ void drawSquare(int startCol, int startRow, int width, int height)
 }
 
 void drawTriangle(int startCol, int startRow, int width) {
-    // Drawing the first side
+    // Drawing the left side
     for(int i = 0; i < width; i++) {
         for(int j = 0; j <= i; j++) {
-            drawPixel(startCol + i - j, startRow + j, COLOR_BLACK);  // Right side
+            drawPixel(startCol - j, startRow + i, COLOR_BLACK);  // Left side goes upwards and left
         }
     }
 
-    // Drawing the second side
+    // Drawing the right side
     for(int i = 0; i < width; i++) {
         for(int j = 0; j <= i; j++) {
-            drawPixel(startCol - i + j, startRow + j, COLOR_BLACK);  // Left side
+            drawPixel(startCol + j, startRow + i, COLOR_BLACK);  // Right side goes upwards and right
         }
-    }
-
-    // Drawing the base
-    for(int i = 0; i < width; i++) {
-        drawPixel(startCol - width/2 + i, startRow + width - 1, COLOR_BLACK);  // Base
     }
 }
+
 
 
 
