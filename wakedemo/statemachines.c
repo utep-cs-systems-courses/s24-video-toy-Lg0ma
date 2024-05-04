@@ -24,8 +24,8 @@ void next_state(int state) {
     line =1;
     clearScreen(WHITE);
     drawLine(20,40,20,COLOR_BLACK);
-    drawString5x7(20,15,"I did that in assembly",WHITE,BLACK);
-    __delay_cycles(150000);
+    drawString5x7(20,15,"I did that in assembly",BLACK,WHITE);
+    __delay_cycles(15000000);
     restore_vynil();
     line = 0;
     break;
