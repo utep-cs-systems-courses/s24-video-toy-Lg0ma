@@ -55,7 +55,6 @@ void next_state(int state) {
     fur_elis = 0; 
     break;
   default:
-    clearScreen(COLOR_RED);
     green_led_on();
     break;
   }
