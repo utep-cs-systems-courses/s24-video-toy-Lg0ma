@@ -32,7 +32,7 @@ void restore_vynil()
 	draw_circle(50, COLOR_BLACK);
 	draw_circle(20, COLOR_GRAY);
 	draw_circle(15, COLOR_WHITE);
-	drawString5x7(16,140,"Choose a Tune", BLACK, COLOR_WHITE);
+	drawString5x7(26,140,"Choose a Tune", BLACK, COLOR_WHITE);
 }
 
 
@@ -83,7 +83,7 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
 
 void drawPlayButton()
  {
-  int startX = 54;
+  int startX = 64;
   int startY = 120;
   int size = 10; 
   for (int i = 0; i < size; ++i) 
