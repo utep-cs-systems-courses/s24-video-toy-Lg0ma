@@ -110,6 +110,11 @@ void wdt_c_handler()
   
 void update_shape();
 
+void
+update_shape()
+{
+  screen_update_ball();
+}
 void main()
 {
   
@@ -133,17 +138,6 @@ void main()
     P1OUT |= LED;	/* led on */
   }
 }
-
-
-
-
-    
-void
-update_shape()
-{
-  screen_update_ball();
-}
-   
 
 
 void
