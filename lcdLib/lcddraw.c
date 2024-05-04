@@ -23,7 +23,7 @@ void drawPixel(u_char col, u_char row, u_int colorBGR)
 void draw_circle(u_char radiusx, u_int color)
 {
   int centerX = screenWidth/2; // X-coordinate of circle center
-  int centerY = screenHeight/2; // Y-coordinate of circle center
+  int centerY = screenHeight/2 - 20; // Y-coordinate of circle center
   int radius = radiusx;  // Radius of the circle
 
   for (int x = centerX - radius; x <= centerX + radius; x++)

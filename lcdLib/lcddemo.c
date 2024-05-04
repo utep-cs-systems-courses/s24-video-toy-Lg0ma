@@ -45,7 +45,6 @@ void drawCake()
     int topCol = (screenWidth - 40) / 2;  //
     int topRow = baseRow - 15;       
 
-    // Draw base layer
     fillRectangle(baseCol, baseRow, 60, 20, COLOR_TAN);
     fillRectangle(topCol, topRow, 40, 15, COLOR_TAN);
     fillRectangle(topCol, topRow, 40, 5, COLOR_YELLOW);
@@ -57,9 +56,9 @@ void drawCake()
             fillRectangle(candleCol, topRow - j, 2, 1, COLOR_BLUE); 
         }
     }
-    drawPixel(topCol + 40/2, topRow, COLOR_RED); // Middle cherry
-    drawPixel(topCol + 40/3, topRow, COLOR_RED); // Left cherry
-    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); // Right cherry
+    drawPixel(topCol + 40/2, topRow, COLOR_RED); 
+    drawPixel(topCol + 40/3, topRow, COLOR_RED); 
+    drawPixel(topCol + 2*40/3, topRow, COLOR_RED); 
 }
 
 
@@ -84,9 +83,9 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
 
 void drawPlayButton()
  {
-  int startX = 20;
-  int startY = 20;
-  int size = 20; 
+  int startX = 54;
+  int startY = 120;
+  int size = 10; 
   for (int i = 0; i < size; ++i) 
   {
     for (int j = 0; j < i; ++j) 
