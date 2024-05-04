@@ -7,12 +7,13 @@
 #include "lcddraw.h"
 
 void drawPiano(){
+  fillRectangle(11, 125, 105, 30, COLOR_BROWN);
   drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
   // used to draw the lines to create piano keys
   for(int i = 15; i < 116; i++){
     if ((i % 10) == 0){
       for(int j = 130; j < 155; j++){
-	drawPixel(i, j, COLOR_BLACK);
+	      drawPixel(i, j, COLOR_BLACK);
       }
     }
   }
@@ -31,7 +32,7 @@ void restore_vynil()
 {
 	draw_circle(50, COLOR_BLACK);
 	draw_circle(20, COLOR_RED);
-	draw_circle(10, COLOR_WHITE);
+	draw_circle(5, COLOR_WHITE);
   fillRectangle(74,28,50,10,COLOR_GRAY);
 	drawString5x7(26,120,"Choose a Tune", BLACK, COLOR_WHITE);
 }
@@ -147,8 +148,9 @@ main()
   // drawTriangle(40,40,20,20);
   // drawPiano();
   // drawCake();
-  drawPlayButton();
+  // drawPlayButton();
   restore_vynil();
+  drawPiano();
 }
 
 
