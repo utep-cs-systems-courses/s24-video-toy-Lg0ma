@@ -17,34 +17,11 @@
 char blue = 31, green = 0, red = 31;
 unsigned char step = 0;
 
-static char 
-switch_update_interrupt_sense()
-{
-  char p2val = P2IN;
-  /* update switch interrupt to detect changes from current buttons */
-  P2IES |= (p2val & SWITCHES);	/* if switch up, sense down */
-  P2IES &= (p2val | ~SWITCHES);	/* if switch down, sense up */
-  return p2val;
-}
 
-void 
-switch_init()			/* setup switch */
-{  
-  P2REN |= SWITCHES;		/* enables resistors for switches */
-  P2IE |= SWITCHES;		/* enable interrupts from switches */
-  P2OUT |= SWITCHES;		/* pull-ups for switches */
-  P2DIR &= ~SWITCHES;		/* set switches' bits for input */
-  switch_update_interrupt_sense();
-}
 
-int switches = 0;
 
-void
-switch_interrupt_handler()
-{
-  char p2val = switch_update_interrupt_sense();
-  switches = ~p2val & SWITCHES;
-}
+
+
 
 
 // axis zero for col, axis 1 for row
@@ -93,17 +70,11 @@ void wdt_c_handler()
 	controlPos[0] = newCol;
     }
 
-    {				/* update hourglass */
-      if (switches & SW3) green = (green + 1) % 64;
-      if (switches & SW2) blue = (blue + 2) % 32;
-      if (switches & SW1) red = (red - 3) % 32;
-      if (step <= 30)
-	step ++;
-      else
-	step = 0;
+    {			
+
       secCount = 0;
     }
-    if (switches & SW4) return;
+
     redrawScreen = 1;
   }
 }
