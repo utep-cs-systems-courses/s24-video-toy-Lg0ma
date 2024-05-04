@@ -6,7 +6,7 @@ void buzzer_set_period(short cycles);
 void fur_Elise();
 void happy_Bday();
 void Mario();
-void runaway();
+void runawey();
 
 
 #endif // included
