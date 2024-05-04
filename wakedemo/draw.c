@@ -129,7 +129,7 @@ void restore_vynil()
   	fillRectangle(74,28,50,10,COLOR_GRAY);
 	drawString5x7(26,120,"Choose a Tune", BLACK, COLOR_WHITE);
 	draw_circle(7,20,140,COLOR_BLACK);
-	draw_Cake(7,108,140,COLOR_BLACK);
+	draw_circle(7,108,140,COLOR_BLACK);
 }
 
 void draw_Play_Button()
