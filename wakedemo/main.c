@@ -32,35 +32,6 @@ void update_vynil()
   }
 }
 
-short drawPos[2] = {1,10}, controlPos[2] = {2, 10};
-short colVelocity = 1, colLimits[2] = {1, screenWidth/2};
-
-void
-draw_ball(int col, int row, unsigned short color)
-{
-  fillRectangle(col-1, row-1, 3, 3, color);
-}
-
-void
-screen_update_ball()
-{
-  for (char axis = 0; axis < 2; axis ++) 
-    if (drawPos[axis] != controlPos[axis]) /* position changed? */
-      goto redraw;
-  return;			/* nothing to do */
- redraw:
-  draw_ball(drawPos[0], drawPos[1], COLOR_BLUE); /* erase */
-  for (char axis = 0; axis < 2; axis ++) 
-    drawPos[axis] = controlPos[axis];
-  draw_ball(drawPos[0], drawPos[1], COLOR_WHITE); /* draw */
-}
-
-void
-update_shape()
-{
-  screen_update_ball();
-}
-
 void main(void) 
 {
   configureClocks();
@@ -105,25 +76,6 @@ void wdt_c_handler()
   if(cd_state){
     update_vynil();
   }
-
-//----------------------------------------------------
-if (sec_cout >= 25) {		/* 10/sec */
-   
-    {				/* move ball */
-      short oldCol = controlPos[0];
-      short newCol = oldCol + colVelocity;
-      if (newCol <= colLimits[0] || newCol >= colLimits[1])
-	colVelocity = -colVelocity;
-      else
-	controlPos[0] = newCol;
-    }
-
-    {				/* update hourglass */
-    redrawScreen = 1;
-  }
-}
-//----------------------------------------------------
-
   if(runaway){
     if(runaway_time >= 3000){
       runaway = 0;
