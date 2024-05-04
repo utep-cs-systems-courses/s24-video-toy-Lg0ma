@@ -17,6 +17,19 @@ void runaway_cover(){
   drawTriangle(70,80,15);
 }
 
+void drawTriangle(int startCol, int startRow, int width) {
+    for(int i = 0; i < width; i++) {
+        for(int j = 0; j <= i; j++) {
+            drawPixel(startCol - j, startRow + i, COLOR_BLACK);  
+        }
+    }
+
+    for(int i = 0; i < width; i++) {
+        for(int j = 0; j <= i; j++) {
+            drawPixel(startCol + j, startRow + i, COLOR_BLACK);  
+    }
+}
+}
 
 void draw_Cake()
 {

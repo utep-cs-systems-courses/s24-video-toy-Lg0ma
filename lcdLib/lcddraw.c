@@ -20,19 +20,7 @@ void drawPixel(unsigned char col, unsigned char row, unsigned int colorBGR)
   lcd_writeColor(colorBGR);
 }
 
-void drawTriangle(int startCol, int startRow, int width) {
-    for(int i = 0; i < width; i++) {
-        for(int j = 0; j <= i; j++) {
-            drawPixel(startCol - j, startRow + i, COLOR_BLACK);  
-        }
-    }
 
-    for(int i = 0; i < width; i++) {
-        for(int j = 0; j <= i; j++) {
-            drawPixel(startCol + j, startRow + i, COLOR_BLACK);  
-    }
-}
-}
 
 void draw_circle(unsigned char radiusx, unsigned int color)
 {
