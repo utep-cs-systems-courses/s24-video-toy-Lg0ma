@@ -106,6 +106,23 @@ void wdt_c_handler()
     update_vynil();
   }
 
+//----------------------------------------------------
+if (sec_cout >= 25) {		/* 10/sec */
+   
+    {				/* move ball */
+      short oldCol = controlPos[0];
+      short newCol = oldCol + colVelocity;
+      if (newCol <= colLimits[0] || newCol >= colLimits[1])
+	colVelocity = -colVelocity;
+      else
+	controlPos[0] = newCol;
+    }
+
+    {				/* update hourglass */
+    redrawScreen = 1;
+  }
+//----------------------------------------------------
+
   if(runaway){
     if(runaway_time >= 3000){
       runaway = 0;
