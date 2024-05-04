@@ -20,9 +20,9 @@ void drawPixel(unsigned char col, unsigned char row, unsigned int colorBGR)
   lcd_writeColor(colorBGR);
 }
 
-
-
-void draw_circle(unsigned char radiusx, unsigned int color)
+//screenWidth/2;
+//screenHeight/2 - 20;
+void draw_circle(unsigned char radiusx, unsigned char centerX, unsigned char centerY, unsigned int color)
 {
   int centerX = screenWidth/2; // X-coordinate of circle center
   int centerY = screenHeight/2 - 20; // Y-coordinate of circle center

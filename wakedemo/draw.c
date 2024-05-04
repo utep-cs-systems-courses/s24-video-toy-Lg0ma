@@ -123,11 +123,13 @@ void draw_shine2()
 void restore_vynil()
 {
 	clearScreen(WHITE);
-	draw_circle(50, COLOR_BLACK);
-	draw_circle(20, COLOR_RED);
-	draw_circle(5, COLOR_WHITE);
+	draw_circle(50, screenWidth/2, screenHeight/2 - 20, COLOR_BLACK);
+	draw_circle(20, screenWidth/2, screenHeight/2 - 20, COLOR_RED);
+	draw_circle(5, screenWidth/2, screenHeight/2 - 20, COLOR_WHITE);
   	fillRectangle(74,28,50,10,COLOR_GRAY);
 	drawString5x7(26,120,"Choose a Tune", BLACK, COLOR_WHITE);
+	draw_circle(7,20,140,COLOR_BLACK);
+	draw_Cake(7,108,140,COLOR_BLACK);
 }
 
 void draw_Play_Button()

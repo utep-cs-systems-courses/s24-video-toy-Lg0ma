@@ -11,6 +11,7 @@ void draw_shine1();
 void draw_shine2();
 void restore_vynil();
 void draw_Play_Button();
+void drawTriangle(int startCol, int startRow, int width);
 
 extern int cd_state;
 extern int cd_spin;
