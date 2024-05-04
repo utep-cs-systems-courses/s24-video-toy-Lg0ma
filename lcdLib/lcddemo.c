@@ -125,6 +125,9 @@ void draw_level()
   fillRectangle(67,60,8,8,COLOR_YELLOW);
   fillRectangle(33,82,7,6,COLOR_BLUE);
   fillRectangle(33,77,7,6,COLOR_RED);
+  fillRectangle(30,44,10,6,WHITE);
+  fillRectangle(55,48,10,6,WHITE);
+
 }
 
 
