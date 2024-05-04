@@ -79,28 +79,31 @@ void draw_level()
 
 void draw_stars()
 {
-	// for(int i = 0; i < screenWidth; i ++)
-	// {
-	// 	for(int j = 0; j < 110; j++)
-	// 	{
-	// 		if(((i*3) % 35) == 2)
-	// 		{
-	// 			if(((i + ((j * 2) % i)) % 18) == 1)
-	// 			{
-	// 				drawPixel(i,j, WHITE);
-	// 			}
-	// 		}
-	// 	}
-	// }
-	drawPixel(19,38, WHITE);
-	drawPixel(63,82 ,WHITE);
-	drawPixel(27,92, WHITE);
-	drawPixel(72,28, WHITE);
-	drawPixel(102,81, WHITE);
-	drawPixel(108,63, WHITE);
-	drawPixel(59,28, WHITE);
-	drawPixel(30,100, WHITE);
-	drawPixel(83,47, WHITE);
+	drawPixel(45, 23, WHITE);
+	drawPixel(117, 5, WHITE);
+	drawPixel(3, 78, WHITE);
+	drawPixel(88, 15, WHITE);
+	drawPixel(77, 98, WHITE);
+	drawPixel(20, 34, WHITE);
+	drawPixel(121, 67, WHITE);
+	drawPixel(52, 79, WHITE);
+	drawPixel(33, 55, WHITE);
+	drawPixel(99, 40, WHITE);
+	drawPixel(64, 20, WHITE);
+	drawPixel(14, 89, WHITE);
+	drawPixel(107, 7, WHITE);
+	drawPixel(50, 50, WHITE);
+	drawPixel(92, 99, WHITE);
+	drawPixel(25, 15, WHITE);
+	drawPixel(80, 47, WHITE);
+	drawPixel(18, 60, WHITE);
+	drawPixel(70, 82, WHITE);
+	drawPixel(60, 9, WHITE);
+	drawPixel(4, 29, WHITE);
+	drawPixel(115, 55, WHITE);
+	drawPixel(12, 93, WHITE);
+	drawPixel(86, 22, WHITE);
+	drawPixel(79, 109, WHITE);
 }
 
 void draw_Piano()
