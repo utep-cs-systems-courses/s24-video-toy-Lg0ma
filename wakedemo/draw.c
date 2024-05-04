@@ -65,7 +65,7 @@ void draw_Cake()
 void draw_level()
 {
   clearScreen(WHITE);
-  drawString5x7(40,15,"Mario",BLACK,WHITE);
+  drawString5x7(46,20,"Mario",BLACK,WHITE);
   fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
   fillRectangle(20,100, 88, 22, COLOR_BROWN);
   fillRectangle(30, 90, 15,10, COLOR_GREEN);
@@ -113,7 +113,7 @@ void draw_Piano()
 {
   clearScreen(BLACK);
   draw_stars();
-  drawString5x7(30,30,"Fur Elise",WHITE,BLACK);
+  drawString5x7(36,30,"Fur Elise",WHITE,BLACK);
   fillRectangle(11, 125, 110, 35, COLOR_BROWN);
   fillRectangle(16, 130, 100, 25, COLOR_WHITE);
   drawRectOutline(16, 130, 100, 25, COLOR_BLACK);
