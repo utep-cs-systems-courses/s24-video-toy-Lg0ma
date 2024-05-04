@@ -123,7 +123,7 @@ void draw_Play_Button()
   
 }
 
-void update_screen(u_char cd_state)
+void update_screen(int cd_state)
 {
   if(cd_state){
     cd_spin = 1;
