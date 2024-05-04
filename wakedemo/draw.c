@@ -79,7 +79,7 @@ void draw_level()
 
 void draw_stars()
 {
-	for(int i = 0; i < screenWidth; i ++)
+	for(int i = 0; i < 200; i ++)
 	{
 		for(int j = 0; j < 110; j++)
 		{
