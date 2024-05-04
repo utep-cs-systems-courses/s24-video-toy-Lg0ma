@@ -77,8 +77,8 @@ void Mario()
 
 void runawey()
 {
-  int notes[] = {Fsharp4, E4, Dsharp4, Csharp4, B3, A3, Gsharp3, Fsharp3, E3, Dsharp3, Csharp3, B2, A2, Gsharp2, Fsharp2};
-  int tempo[] = {1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250, 1250};
+  int notes[] = {E4, E4, E4, E4, G4, E4, D4, D4, D4, D4, B4, D4, C4, C4, C4, C4, E4, D4};
+  int tempo[] = {500, 500, 500, 500, 1000, 500, 500, 500, 500, 500, 1000, 500, 500, 500, 500, 500, 1000, 500};
 
   int noteAmt = sizeof(notes)/sizeof(notes[0]);
   playTune(notes,tempo,noteAmt);

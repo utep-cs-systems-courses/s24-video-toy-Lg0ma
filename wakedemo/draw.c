@@ -79,19 +79,28 @@ void draw_level()
 
 void draw_stars()
 {
-	for(int i = 0; i < 200; i ++)
-	{
-		for(int j = 0; j < 110; j++)
-		{
-			if(((i*3) % 35) == 2)
-			{
-				if(((i + (j % i)) % 18) == 1)
-				{
-					drawPixel(i,j, WHITE);
-				}
-			}
-		}
-	}
+	// for(int i = 0; i < screenWidth; i ++)
+	// {
+	// 	for(int j = 0; j < 110; j++)
+	// 	{
+	// 		if(((i*3) % 35) == 2)
+	// 		{
+	// 			if(((i + ((j * 2) % i)) % 18) == 1)
+	// 			{
+	// 				drawPixel(i,j, WHITE);
+	// 			}
+	// 		}
+	// 	}
+	// }
+	drawPixel(19,38, WHITE);
+	drawPixel(63,82 ,WHITE);
+	drawPixel(27,92, WHITE);
+	drawPixel(72,28, WHITE);
+	drawPixel(102,81, WHITE);
+	drawPixel(108,63, WHITE);
+	drawPixel(59,28, WHITE);
+	drawPixel(30,100, WHITE);
+	drawPixel(83,47, WHITE);
 }
 
 void draw_Piano()
