@@ -114,6 +114,13 @@ void drawPlayButton()
   
 }
 
+void draw_level()
+{
+	clearScreen(WHITE);
+  fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
+	fillRectangle(20,100, 88, 20, COLOR_BROWN);
+}
+
 
 
 void drawRunaway(){
@@ -126,10 +133,6 @@ void drawRunaway(){
   fillRectangle(67,58,7,7,COLOR_TAN);
   fillRectangle(65,70,10,15,COLOR_BLACK);
   drawTriangle(70,80,15);
-
-
-
-
 }
 
 
@@ -161,8 +164,8 @@ main()
   // drawPlayButton();
   // restore_vynil();
   // drawPiano();
-  drawRunaway();
-  drawTriangle(70,80,15);
+  // drawRunaway();
+  draw_level();
 }
 
 
