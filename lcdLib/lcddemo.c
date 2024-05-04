@@ -74,24 +74,27 @@ void drawSquare(int startCol, int startRow, int width, int height)
   }
 }
 
-void drawTriangle(int startCol, int startRow, int width)
-{
-  for(int i = 0; i < width; i++)
-  {
-    for(int j = 0; j < i; j++)
-    {
-      drawPixel(startCol + i, startRow + j ,COLOR_BLACK);
+void drawTriangle(int startCol, int startRow, int width) {
+    // Drawing the first side
+    for(int i = 0; i < width; i++) {
+        for(int j = 0; j <= i; j++) {
+            drawPixel(startCol + i - j, startRow + j, COLOR_BLACK);  // Right side
+        }
     }
-  }
-  for(int i = 0; i < width; i++)
-  {
-    for (int j = 0; i < j; j++)
-    {
-      drawPixel(startCol - i, startRow + j, COLOR_BLACK);
+
+    // Drawing the second side
+    for(int i = 0; i < width; i++) {
+        for(int j = 0; j <= i; j++) {
+            drawPixel(startCol - i + j, startRow + j, COLOR_BLACK);  // Left side
+        }
     }
-    
-  }
+
+    // Drawing the base
+    for(int i = 0; i < width; i++) {
+        drawPixel(startCol - width/2 + i, startRow + width - 1, COLOR_BLACK);  // Base
+    }
 }
+
 
 
 void drawPlayButton()
