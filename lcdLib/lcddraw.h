@@ -7,7 +7,7 @@
 
 void draw_circle(unsigned char radiusx, unsigned char centerX, unsigned char centerY, unsigned int color);
 
-
+ 
 /** Draw single pixel at col, row 
  *
  *  \param col Column to draw to
