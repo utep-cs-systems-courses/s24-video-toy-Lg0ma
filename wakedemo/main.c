@@ -10,15 +10,15 @@
 #include "switches.h"
 #include "draw.h"
 
-extern int redrawScreen;
-int redrawScreen = 1;
-int cd_state;
-int cd_spin;
-int line;
-int runaway;
-int mario;
-int hbd;
-int fur_elise;
+extern u_char redrawScreen;
+u_char redrawScreen = 1;
+u_char cd_state;
+u_char cd_spin;
+u_char line;
+u_char runaway;
+u_char mario;
+u_char hbd;
+u_char fur_elis;
 
 void main(void) 
 {
@@ -30,69 +30,66 @@ void main(void)
   enableWDTInterrupts();   
 
   led_flash(2);
-  or_sr(0x8);                  
+  or_sr(0x8);     
+  restore_vynil();
+  cd_state =1;
+  cd_spin = 1;             
 
-
-  while (1) {			/* forever */
+  while (1) {		
     if (redrawScreen) {
       redrawScreen = 0;
-      update_face_eyes(eyes_state);
+      update_screen(cd_state);
     }
-    or_sr(0x10);               /**< CPU OFF*/
+    or_sr(0x10);        
   }  
 }
 
 void wdt_c_handler()
 {
-  static int boat_time = 0;
-  static int eyes_time = 0;
-  static int piano_time = 0;
-  static int christmas_time = 0;
-  static int run_time = 0;
-  static int mc_time = 0;
+  static int cd_time = 0;
+  static int runaway_time = 0;
+  static int fureli_time = 0;
+  static int hbd_time = 0;
+  static int mario_time = 0;
   
-  if(eyes_open){
-    if(eyes_time++ >= 1000) {
-      eyes_time = 0;
-      eyes_state = 0;
+  if(cd_spin){
+    if(cd_time++ >= 1000) {
+      cd_time = 0;
+      cd_state = 0;
       redrawScreen = 1;
     }
   }
   else{
-    if(eyes_time++ >= 2000) {
-      eyes_time = 0;
-      eyes_open = 1;
+    if(cd_time++ >= 2000) {
+      cd_time = 0;
+      cd_spin = 1;
       redrawScreen = 1;
     }
   }
-  if(boat){
-    if(boat_time >= 2000){
-      boat = 0;
-      clearMain();
+  if(runaway){
+    if(runaway_time >= 2000){
+      runaway = 0;
     }
   }
-  if(piano){
-    if(piano_time >= 2000){
-      piano = 0;
-      clearMain();
+  if(mario){
+    if(mario_time >= 2000){
+      mario = 0;
     }
   }
-  if(christmas){
-    if(christmas_time >= 2000){
-      christmas = 0;
-      clearMain();
+  if(hbd){
+    if(hbd_time >= 2000){
+      hbd = 0;
     }
   }
-  if(run){
-    if(run_time >= 2000){
-      run = 0;
-      //clearMain();
+  if(fur_elis){
+    if(fureli_time >= 2000){
+      fur_elis = 0;
     }
   }
-  if(mc){
-    if(mc_time >= 2000){
-      mc = 0;
-      clearMain();
-    }
-  }
+  // if(mc){
+  //   if(mc_time >= 2000){
+  //     mc = 0;
+  //     clearMain();
+  //   }
+  // }
 }

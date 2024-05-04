@@ -7,6 +7,14 @@
 #include "lcddraw.h"
 #include "lcdutils.h"
 
+extern u_char cd_state;
+extern u_char cd_spin;
+extern u_char line;
+extern u_char runaway;
+extern u_char mario;
+extern u_char hbd;
+extern u_char fur_elis;
+
 void next_state(int state) {
   leds_off();
   
@@ -16,36 +24,36 @@ void next_state(int state) {
     fillRectangle(34, 80, 60, 60, COLOR_YELLOW);  
     break;
   case 1:
-    clearScreen(COLOR_WHITE);
-    led_flash(3);
-    leds_off();
-    fur_Elise();
-    leds_off();
+    runaway = 1;
+    runaway_cover();
+    draw_Play_Button();
+    runawey();
+    restore_vynil();
+    runaway = 0;
     break;
   case 2:
-    clearScreen(COLOR_BEIGE);
-    led_flash(3);
-    leds_off();
-    red_led_on();
-    happy_Bday();
-    leds_off();
+    mario = 1;
+    draw_level();
+    draw_Play_Button();
+    Mario();
+    restore_vynil();
+    mario = 0;
     break;
   case 3:
-    clearScreen(COLOR_BLUE);
-    led_flash(3);
-    leds_off();
-    red_led_on();
-    Mario();
-    leds_off();
+    hbd = 1; 
+    draw_Cake();
+    draw_Play_Button();
+    happy_Bday();
+    restore_vynil();
+    hbd = 0;
     break;
   case 4:
-    clearScreen(COLOR_RED);
-    led_flash(3);
-    leds_off();
-    red_led_on();
-    runaway();
-    runaway_cover();
-    leds_off();
+    fur_elis = 1;
+    draw_Piano();
+    draw_Play_Button();
+    fur_Elise();
+    restore_vynil();
+    fur_elis = 0; 
     break;
   default:
     clearScreen(COLOR_RED);

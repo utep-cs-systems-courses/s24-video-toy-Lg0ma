@@ -3,6 +3,8 @@
  */
 #include "lcdutils.h"
 #include "lcddraw.h"
+#include <math.h>
+
 
 
 typedef unsigned char u_char;
