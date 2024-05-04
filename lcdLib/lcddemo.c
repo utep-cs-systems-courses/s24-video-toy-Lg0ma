@@ -152,7 +152,7 @@ main()
   int speed = 6;
   
   // drawSquare(20,20,20,20);
-  drawTriangle(40,40,20,20);
+  drawTriangle(40,40,20);
   // drawPiano();
   // drawCake();
   // drawPlayButton();
