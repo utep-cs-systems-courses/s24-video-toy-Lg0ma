@@ -83,7 +83,7 @@ void drawTriangle1(int startCol, int startRow, int width, int height)
 
 void drawPlayButton()
  {
-  int startX = 64;
+  int startX = 60;
   int startY = 120;
   int size = 10; 
   for (int i = 0; i < size; ++i) 
