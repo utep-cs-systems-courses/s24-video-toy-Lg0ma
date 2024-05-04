@@ -22,6 +22,7 @@ void next_state(int state) {
   switch(state) {
   case 0:
     line =1;
+    clearScreen(WHITE);
     drawLine(20,40,20,COLOR_BLACK);
     drawString5x7(20,15,"I did that in assembly",WHITE,BLACK);
     __delay_cycles(150000);
