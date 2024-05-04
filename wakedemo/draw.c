@@ -6,6 +6,7 @@
 #include "draw.h"
 
 void runaway_cover(){
+  clearScreen(WHITE);
   fillRectangle(20,34,88, 88, COLOR_RED);
   fillRectangle(39,53,50, 50, COLOR_YELLOW);
   fillRectangle(42,56,44,44,COLOR_AQUAMARINE);
