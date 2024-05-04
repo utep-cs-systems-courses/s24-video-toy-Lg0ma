@@ -93,6 +93,7 @@ void draw_shine2()
 
 void restore_vynil()
 {
+	clearScreen(WHITE);
 	draw_circle(50, COLOR_BLACK);
 	draw_circle(20, COLOR_RED);
 	draw_circle(5, COLOR_WHITE);
