@@ -15,7 +15,7 @@ drawPix:
     mov.b #0, 4(r1) ; i=0
 Top:
     cmp 2(r1), 4(r1); i-size
-    jc Out
+    jge Out
     add #1, 0(r1)
     mov.b 0(r1), r12
     sub #1, 1(r1)

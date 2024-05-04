@@ -201,7 +201,7 @@ void update_screen(int cd_state)
 	restore_vynil();
   }
   if(line){
-    // drawLine(20,40,20,COLOR_BLACK);
+    drawLine(20,40,20,COLOR_BLACK);
 	// drawPix(20,20);
 	draw_Box(screenWidth/2, screenHeight/2,20);
   }
