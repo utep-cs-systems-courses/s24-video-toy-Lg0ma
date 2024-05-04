@@ -119,7 +119,9 @@ void drawPlayButton()
 void drawRunaway(){
   fillRectangle(20,34,88, 88, COLOR_RED);
   fillRectangle(39,53,50, 50, COLOR_YELLOW);
-  // drawTriangle()
+  fillRectangle(75,80,10,23,COLOR_TAN);
+  drawTriangle(70,80,15);
+
 
 
 
