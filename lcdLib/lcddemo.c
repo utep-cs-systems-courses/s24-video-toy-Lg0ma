@@ -120,6 +120,8 @@ void drawRunaway(){
   fillRectangle(20,34,88, 88, COLOR_RED);
   fillRectangle(39,53,50, 50, COLOR_YELLOW);
   fillRectangle(65,93,10,10,COLOR_TAN);
+  fillRectangle(55,73,20,5,COLOR_TAN);
+  fillRectangle(65,70,10,10,COLOR_BLACK);
   drawTriangle(70,80,15);
 
 
