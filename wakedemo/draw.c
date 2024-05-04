@@ -7,6 +7,7 @@
 
 void runaway_cover(){
   clearScreen(WHITE);
+  drawString5x7(35,30,"Runaway",BLACK,WHITE);
   fillRectangle(20,34,88, 88, COLOR_RED);
   fillRectangle(39,53,50, 50, COLOR_YELLOW);
   fillRectangle(42,56,44,44,COLOR_AQUAMARINE);
@@ -35,6 +36,7 @@ void drawTriangle(int startCol, int startRow, int width) {
 void draw_Cake()
 {
     clearScreen(WHITE);
+	drawString5x7(30,30,"Happy Birthday",BLACK,WHITE);
   	fillRectangle(20,34,88, 88, COLOR_AQUAMARINE);
 	int baseCol = (screenWidth - 60) / 2; //128-60/2 = 34
     int baseRow = screenHeight / 2;//80     
@@ -62,6 +64,7 @@ void draw_Cake()
 
 void draw_level()
 {
+  drawString5x7(30,30,"Mario",BLACK,WHITE);
   clearScreen(WHITE);
   fillRectangle(20,34,88, 88, COLOR_SKY_BLUE);
   fillRectangle(20,100, 88, 22, COLOR_BROWN);
@@ -108,6 +111,7 @@ void draw_stars()
 
 void draw_Piano()
 {
+  drawString5x7(30,30,"Fur Elise",WHITE,BLACK);
   clearScreen(BLACK);
   draw_stars();
   fillRectangle(11, 125, 110, 35, COLOR_BROWN);
