@@ -155,7 +155,7 @@ main()
   // restore_vynil();
   // drawPiano();
   drawRunaway();
-  drawTriangle(70,80,20);
+  drawTriangle(70,70,15);
 }
 
 
