@@ -7,20 +7,22 @@
 	.extern drawPixel
 
 drawLine:
-	sub #6,r1
-	mov.b r12, 0(r1)	; colo _col
-	mov.b r13, 1(r1)	;row = _row
-	mov.b r14, 2(r1)	;size = _size
-	mov.b r15, 3(r1)	;color = _color
-	mov.b #0, 4(r1) 	; val = 0
+	sub #6, r1
+    mov.b r12, 0(r1) ; col
+    mov.b r13, 1(r1) ;row
+    mov.b r14, 2(r1) ;size
+    mov.b #0, 4(r1) ; i=0
 Top:
-	cmp 2(r1), 4(r1)	;val-size
-	jc Out
-	call #drawPixel
-	add #1, 0(r1)
-	add #1, 1(r1)
-	add #1, 4(r1)
-	jmp Top
+    cmp 2(r1), 4(r1); i-size
+    jc Out
+    add #1, 0(r1)
+    mov.b 0(r1), r12
+    sub #1, 1(r1)
+    mov.b 1(r1), r13
+    mov 0x0000 , r14
+    call #drawPixel
+    add #1, 4(r1)
+    jmp Top
 Out:
-	add #6, r1
-	pop r0
+    add #6, r1
+    pop r0
