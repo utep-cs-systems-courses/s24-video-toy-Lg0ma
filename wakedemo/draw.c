@@ -181,6 +181,17 @@ void draw_Play_Button()
   
 }
 
+void draw_Box(unsigned char col, unsigned char row, unsigned char size)
+{
+	for(int i =0; i < size; i++)
+	{
+		for(int j = 0; j < size; j++)
+		{
+			drawPix(col + i, row + j);
+		}
+	}
+}
+
 
 void update_screen(int on_main)
 {
