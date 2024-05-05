@@ -7,7 +7,7 @@
 	.extern drawPixel
 
 drawLine:
-	sub #6, r1
+	sub #5, r1
     mov.b r12, 0(r1) ; col
     mov.b r13, 1(r1) ;row
     mov.b r14, 2(r1) ;size
@@ -15,13 +15,13 @@ drawLine:
 Top:
     cmp 2(r1), 4(r1); i-size
     jc Out
-    add #1, 0(r1)
+    add.b #1, 0(r1)
     mov.b 0(r1), r12
-    sub #1, 1(r1)
+    sub.b #1, 1(r1)
     mov.b 1(r1), r13
     mov 0x0000 , r14
     call #drawPixel
-    add #1, 4(r1)
+    add.b #1, 4(r1)
     jmp Top
 Out:
     add #6, r1
