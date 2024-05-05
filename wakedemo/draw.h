@@ -13,7 +13,7 @@ void restore_vynil();
 void draw_Play_Button();
 void draw_stars();
 void drawTriangle(int startCol, int startRow, int width);
-void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned int color);
+void drawLine(unsigned char col, unsigned char row, unsigned char size);
 void drawPix(unsigned char col, unsigned char row);
 void draw_Box(unsigned char col, unsigned char row, unsigned char size);
 void update_shape();
