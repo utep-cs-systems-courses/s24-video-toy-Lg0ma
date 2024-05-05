@@ -25,7 +25,7 @@ void next_state(int state) {
     on_main = 0;
     line =1;
     clearScreen(WHITE);
-    // drawLine(20,40,20,COLOR_BLACK);
+    drawLine(20,40,20);
     // drawPix(20,20);
     draw_Box(screenWidth/2,screenHeight/2,20);
     drawString5x7(3,30,"I did that in assembly",BLACK,WHITE);
