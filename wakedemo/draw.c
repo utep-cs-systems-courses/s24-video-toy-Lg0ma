@@ -187,7 +187,7 @@ void draw_Box(unsigned char col, unsigned char row, unsigned char size)
 	{
 		for(int j = 0; j < size; j++)
 		{
-			drawPix(col + i, row + j);
+			drawPix(col + i, row + j);//assembly function
 		}
 	}
 }
@@ -227,6 +227,7 @@ void update_screen(int on_main)
 	restore_vynil();
   }
   if(line){
+	drawLine(20,20,20,BLACK);
 	draw_Box(screenWidth/2, screenHeight/2,20);
   }
   if(!line){
