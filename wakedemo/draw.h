@@ -25,4 +25,5 @@ extern int mario;
 extern int hbd;
 extern int fur_elis;
 extern int line;
+extern int on_main;
 #endif

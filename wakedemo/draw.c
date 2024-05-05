@@ -139,19 +139,6 @@ void draw_Piano()
 }
 
 
-void draw_shine1()
-{
-	fillRectangle(71,50,14,10,COLOR_WHITE);
-
-}
-
-void draw_shine2()
-{
-	fillRectangle(71,50,14,10,COLOR_BLACK);
-	fillRectangle(71,50,14,10,COLOR_WHITE);
-}
-
-
 void restore_vynil()
 {
 	clearScreen(WHITE);
@@ -226,8 +213,6 @@ void update_screen(int cd_state)
 	restore_vynil();
   }
   if(line){
-    // drawLine(20,40,20,COLOR_BLACK);
-	// drawPix(20,20);
 	draw_Box(screenWidth/2, screenHeight/2,20);
   }
   if(!line){

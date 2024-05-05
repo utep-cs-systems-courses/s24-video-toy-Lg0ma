@@ -17,14 +17,14 @@ void
 screen_update_ball()
 {
   for (char axis = 0; axis < 2; axis ++) 
-    if (drawPos[axis] != controlPos[axis]) /* position changed? */
+    if (drawPos[axis] != controlPos[axis])
       goto redraw;
-  return;			/* nothing to do */
+  return;		
  redraw:
-  draw_shine(drawPos[0], drawPos[1], COLOR_BLUE); /* erase */
+  draw_shine(drawPos[0], drawPos[1], COLOR_BLUE);
   for (char axis = 0; axis < 2; axis ++) 
     drawPos[axis] = controlPos[axis];
-  draw_shine(drawPos[0], drawPos[1], COLOR_GREEN); /* draw */
+  draw_shine(drawPos[0], drawPos[1], COLOR_GREEN); 
 }
 
 short redrawScreen = 1;
