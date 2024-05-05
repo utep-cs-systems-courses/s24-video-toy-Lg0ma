@@ -202,30 +202,35 @@ void update_screen(int on_main)
     runaway_cover();
   }
   if(!runaway){
+	update_shape();
 	restore_vynil();
   }
   if(mario){
     draw_level();
   }
   if(!mario){
+	update_shape();
 	restore_vynil();
   }
   if(hbd){
     draw_Cake();
   }
   if(!hbd){
+	update_shape();
 	restore_vynil();
   }
   if(fur_elis){
     draw_Piano();
   }
   if(!fur_elis){
+	update_shape();
 	restore_vynil();
   }
   if(line){
 	draw_Box(screenWidth/2, screenHeight/2,20);
   }
   if(!line){
+	update_shape();
 	restore_vynil();
   }
 }

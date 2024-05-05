@@ -53,7 +53,7 @@ void wdt_c_handler()
   static int line_time = 0;
   sec_cout++;
   
-  if (sec_cout >= 25) {		/* 10/sec */			/* move ball */
+  if (sec_cout >= 25) {		
     short oldCol = controlPos[0];
     short newCol = oldCol + colVelocity;
     if (newCol <= colLimits[0] || newCol >= colLimits[1])
@@ -116,9 +116,6 @@ void main(void)
     if (redrawScreen) {
       redrawScreen = 0;
       update_screen(on_main);
-      // if(on_main == 1){
-        update_shape();
-      // }
     }
     or_sr(0x10);        
   }  
