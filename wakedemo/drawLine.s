@@ -14,7 +14,7 @@ drawLine:
     mov.b #0, 4(r1) ; i=0
 Top:
     cmp.b 2(r1), 4(r1); i-size
-    jc Out
+    jge Out
     add.b #1, 0(r1)
     mov.b 0(r1), r12
     sub.b #1, 1(r1)
