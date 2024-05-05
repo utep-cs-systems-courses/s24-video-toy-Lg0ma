@@ -17,13 +17,10 @@ void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned
 void drawPix(unsigned char col, unsigned char row);
 void draw_Box(unsigned char col, unsigned char row, unsigned char size);
 
-extern int cd_state;
-extern int cd_spin;
 extern int line;
 extern int runaway;
 extern int mario;
 extern int hbd;
 extern int fur_elis;
-extern int line;
 extern int on_main;
 #endif

@@ -119,9 +119,9 @@ void main(void)
     if (redrawScreen) {
       redrawScreen = 0;
       update_screen(cd_state);
-      if(on_main == 1){
+      // if(on_main == 1){
         update_shape();
-      }
+      // }
     }
     or_sr(0x10);        
   }  
