@@ -4,6 +4,9 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 #include "draw.h"
+#include "main.h"
+
+
 
 void runaway_cover(){
   clearScreen(WHITE);
@@ -19,6 +22,7 @@ void runaway_cover(){
   drawTriangle(70,80,15);
 }
 
+
 void drawTriangle(int startCol, int startRow, int width) {
     for(int i = 0; i < width; i++) {
         for(int j = 0; j <= i; j++) {
@@ -32,6 +36,7 @@ void drawTriangle(int startCol, int startRow, int width) {
     }
 }
 }
+
 
 void draw_Cake()
 {
@@ -77,8 +82,8 @@ void draw_level()
   fillRectangle(30,44,12,6,WHITE);
   fillRectangle(55,48,11,6,WHITE);
   fillRectangle(75,46,11,6,WHITE);
-
 }
+
 
 void draw_stars()
 {
@@ -108,6 +113,7 @@ void draw_stars()
 	drawPixel(86, 22, WHITE);
 	drawPixel(79, 109, WHITE);
 }
+
 
 void draw_Piano()
 {
@@ -175,19 +181,12 @@ void draw_Play_Button()
   
 }
 
-void draw_Box(unsigned char col, unsigned char row, unsigned char size)
-{
-	for(int i =0; i < size; i++)
-	{
-		for(int j = 0; j < size; j++)
-		{
-			drawPix(col + i, row + j);
-		}
-	}
-}
 
-void update_screen(int cd_state)
+void update_screen(int on_main)
 {
+  if(on_main){
+	update_shape();
+  }
   if(runaway){
     runaway_cover();
   }

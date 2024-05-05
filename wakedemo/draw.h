@@ -16,7 +16,14 @@ void drawTriangle(int startCol, int startRow, int width);
 void drawLine(unsigned char col, unsigned char row, unsigned char size, unsigned int color);
 void drawPix(unsigned char col, unsigned char row);
 void draw_Box(unsigned char col, unsigned char row, unsigned char size);
+void update_shape();
+void screen_update_bar();
+void draw_bar(int col, int row, unsigned short color);
 
+
+
+
+extern int cd_state;
 extern int line;
 extern int runaway;
 extern int mario;
