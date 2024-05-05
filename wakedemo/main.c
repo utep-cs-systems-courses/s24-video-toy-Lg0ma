@@ -94,7 +94,7 @@ void wdt_c_handler()
   }
 }
 
-update_shape()
+void update_shape()
 {
   screen_update_bar();
 }
@@ -122,7 +122,6 @@ void main(void)
       if(on_main == 1){
         update_shape();
       }
-      update_vynil();
     }
     or_sr(0x10);        
   }  
